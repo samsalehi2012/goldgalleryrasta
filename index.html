@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>گالری طلای رستا</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="جواهرات طلای ۱۸ عیار، پلاک نام و سفارش اختصاصی در گالری طلای رستا">
+<meta name="theme-color" content="#820D1F">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="رستا">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<style>
+:root{
+  /* layout: Tiffany-style storefront — transparent header over a full-bleed hero, short captions under images, black footer; brand colour only in the top strip and tiny accents */
+  --paper:#FFFFFF; --mist:#F4F4F4; --ink:#111111; --mute:#5F5F5F; --line:#E6E6E6; --strip:#820D1F; --accent:#820D1F; --foot:#0E0E0E;
+  --f:"Vazirmatn",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
+  --ease:cubic-bezier(.32,.72,0,1); --out:cubic-bezier(.22,.61,.36,1);
+  --max:1144px; --pad:16px; --hdr:58px;
+  --sb:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@font-face{font-family:"Vazirmatn";src:url(assets/fonts/vazirmatn-arabic.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+200C-200E,U+2010-2011,U+FB50-FDFF,U+FE70-FEFC}
+@font-face{font-family:"Vazirmatn";src:url(assets/fonts/vazirmatn-latin.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2212}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f)}
+body{-webkit-font-smoothing:antialiased;font-size:15px;line-height:1.75}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+h1,h2,h3{margin:0;font-weight:300;line-height:1.4;text-wrap:balance}
+p{margin:0}
+:focus-visible{outline:1px solid var(--accent);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* type + controls, sized after the reference */
+.t-hero{font-size:38px;line-height:1.3}
+.t-sec{font-size:24px;text-align:center}
+.t-feat{font-size:26px;font-weight:400}
+.t-cap{font-size:18px}
+.t-body{font-size:15px;line-height:1.75;color:var(--ink)}
+.cta{position:relative;display:inline-flex;align-items:center;min-height:32px;padding-bottom:3px;font-size:12.5px;font-weight:600}
+.cta::after{content:"";position:absolute;right:0;left:0;bottom:4px;height:1px;background:currentColor;transform-origin:right;transition:background-color .4s var(--ease)}
+.cta:hover::after{background:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 24px;border:1px solid var(--ink);background:var(--ink);color:#fff;font-size:12.5px;font-weight:600;transition:background-color .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease)}
+.btn:hover{background:#333;border-color:#333}
+.btn.w{background:#fff;border-color:#fff;color:var(--ink)}.btn.w:hover{background:#ECECEC;border-color:#ECECEC}
+.btn.o{background:transparent;color:var(--ink)}.btn.o:hover{background:var(--ink);color:#fff}
+.btn.block{width:100%}
+
+/* top strip */
+.strip{position:relative;background:var(--strip);color:#fff;font-size:12.5px;line-height:1.6;min-height:40px;padding:10px 44px;display:flex;align-items:center;justify-content:center;gap:4px 14px;flex-wrap:wrap;text-align:center}
+.strip a{text-decoration:underline;text-underline-offset:4px}
+.strip .x{position:absolute;left:8px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:0;background:none;color:#fff;display:grid;place-items:center}
+.strip[hidden]{display:none}
+
+/* header: transparent over the hero, white once scrolled */
+.hdr{position:sticky;top:0;z-index:30;color:var(--ink);background:#fff;transition:background-color .45s var(--ease),color .45s var(--ease),box-shadow .45s var(--ease)}
+.hdr.solid{box-shadow:0 1px 0 var(--line)}
+.hdr.over{background:transparent;color:#fff;box-shadow:none}
+.hdr-row{height:var(--hdr);padding:0 12px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center}
+.grp{display:flex;align-items:center;gap:6px}
+.grp.end{justify-content:flex-end}
+.ib{width:40px;height:40px;display:inline-grid;place-items:center;border:0;background:transparent;color:inherit;position:relative}
+.ib svg{width:24px;height:24px}
+.logo{display:block;color:inherit}
+.logo svg{display:block;height:30px;width:auto;transition:height .45s var(--ease)}
+.badge{position:absolute;top:4px;left:2px;min-width:16px;height:16px;padding:0 4px;border-radius:8px;background:var(--accent);color:#fff;font-size:10px;line-height:16px;text-align:center}
+.badge:empty{display:none}
+.nav{display:none}
+
+/* hero (desktop): three slides that cross-fade; copy sits at the reading start, controls under it */
+.hero{position:relative;height:min(82svh,700px);min-height:520px;margin-top:calc(-1 * var(--hdr));overflow:hidden;background:#2A070F;color:#fff}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1s var(--ease),visibility 0s linear 1s}
+.slide.on{opacity:1;visibility:visible;transition-delay:0s}
+.slide>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.035);transition:transform 8s linear}
+.slide.on>img{transform:scale(1)}
+.slide::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(0,0,0,.38) 0%,rgba(0,0,0,0) 22%),linear-gradient(to left,rgba(0,0,0,.5) 0%,rgba(0,0,0,.22) 36%,rgba(0,0,0,0) 60%)}
+.hero-copy{position:absolute;z-index:2;inset-inline-start:max(var(--pad),calc((100% - var(--max))/2 + var(--pad)));bottom:118px;max-width:470px;display:flex;flex-direction:column;align-items:flex-start;gap:16px;text-shadow:0 1px 18px rgba(0,0,0,.25)}
+.hero-copy .t-hero{font-weight:300}
+.hero-copy p{font-size:16px;line-height:1.85;color:rgba(255,255,255,.88);max-width:400px}
+.slide.on .hero-copy>*{animation:copy-in .9s var(--ease) both}
+.slide.on .hero-copy>:nth-child(2){animation-delay:.08s}
+.slide.on .hero-copy>:nth-child(3){animation-delay:.16s}
+@keyframes copy-in{from{opacity:0;transform:translateY(12px)}}
+.gbtn{display:inline-flex;align-items:center;gap:14px;height:52px;padding-inline:24px 6px;margin-top:6px;border-radius:999px;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.08);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#fff;font-size:14px;font-weight:500;text-shadow:none;transition:background-color .35s var(--ease),border-color .35s var(--ease),transform .16s var(--ease)}
+.gbtn i{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#fff;color:var(--ink);transition:transform .35s var(--ease)}
+.gbtn i svg{width:18px;height:18px}
+.gbtn:hover{background:rgba(255,255,255,.18);border-color:#fff}
+.gbtn:hover i{transform:translateX(-3px)}
+.gbtn:active{transform:scale(.97)}
+.hero-ctl{position:absolute;z-index:3;inset-inline-start:max(var(--pad),calc((100% - var(--max))/2 + var(--pad)));bottom:46px;display:flex;align-items:center;gap:18px}
+.hero-ctl .bars{display:flex;gap:8px}
+.hero-ctl .bars button{position:relative;width:56px;height:24px;border:0;background:none;padding:0}
+.hero-ctl .bars button::before,.hero-ctl .bars i{content:"";position:absolute;inset-inline:0;top:11px;height:2px;border-radius:2px}
+.hero-ctl .bars button::before{background:rgba(255,255,255,.35)}
+.hero-ctl .bars i{background:#fff;transform:scaleX(0);transform-origin:right}
+.hero-ctl .bars .done i{transform:scaleX(1)}
+.hero-ctl .bars .run i{animation:bar-fill var(--dur,7s) linear forwards}
+.hero.paused .hero-ctl .bars .run i{animation-play-state:paused}
+@keyframes bar-fill{to{transform:scaleX(1)}}
+.hp{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.55);background:transparent;color:#fff}
+.hp svg{width:14px;height:14px}
+.hp .play,.hero.paused .hp .pause{display:none}
+.hero.paused .hp .play{display:block}
+
+/* sections */
+.sec{padding-top:48px}
+.cats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 10px;margin-top:32px}
+.cat{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;font-size:12px;font-weight:600}
+.cat .im{width:100%;aspect-ratio:1/1;background:var(--mist);overflow:hidden;position:relative}
+.cat .im img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--out)}
+img.wb{mix-blend-mode:multiply}
+.cat:hover .im img{transform:scale(1.04)}
+.soon{position:absolute;inset:0;display:grid;place-items:center;font-size:11.5px;font-weight:400;color:var(--mute)}
+.duo{display:grid;grid-template-columns:minmax(0,1fr);gap:48px}
+.tile{display:flex;flex-direction:column;align-items:center;text-align:center}
+.tile .im{width:100%;aspect-ratio:343/480;overflow:hidden;background:var(--mist)}
+.tile .im img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--out)}
+.tile:hover .im img{transform:scale(1.03)}
+.tile .t-cap{margin-top:22px}
+.tile .cta{margin-top:6px}
+.feat{display:flex;flex-direction:column}
+.feat .im{aspect-ratio:4/5;overflow:hidden;background:var(--mist)}
+.feat .im img{width:100%;height:100%;object-fit:cover}
+.feat .tx{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:32px 32px 0}
+.feat .im{order:-1}
+.feat .tx p{max-width:420px}
+.rail{position:relative;margin-top:40px}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:calc(50% - 12px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 var(--pad);scroll-padding:0 var(--pad);overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.pc{scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0;position:relative}
+.pc .im{width:100%;aspect-ratio:1/1;background:var(--mist);overflow:hidden;display:block;position:relative;isolation:isolate}
+.pc .im .alt{position:absolute;inset:0;opacity:0;transition:opacity .6s var(--ease),transform 1.4s var(--out)}
+@media (hover:hover){.pc:hover .im .alt{opacity:1}}
+.pc .im img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--out)}
+.pc:hover .im img{transform:scale(1.04)}
+.pc .nm{font-size:13px;line-height:1.55;margin-top:10px;padding:0 10px}
+.pc .pr{font-size:13px;color:var(--mute);margin-top:2px}
+.heart{position:absolute;top:6px;left:6px;width:40px;height:40px;border:0;background:transparent;display:grid;place-items:center;color:var(--ink)}
+.heart::before{content:"";position:absolute;inset:4px;border-radius:50%;background:rgba(255,255,255,.88)}
+.heart svg{position:relative}
+.heart[aria-pressed="true"] svg{fill:var(--accent);stroke:var(--accent)}
+.arr{display:none}
+.prog{position:relative;height:1px;background:var(--line);margin:28px auto 0;width:120px}
+.prog span{position:absolute;top:0;right:0;height:1px;background:var(--ink);transition:right .3s var(--ease),width .3s var(--ease)}
+.more{display:flex;justify-content:center;margin-top:18px}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 12px;margin-top:32px}
+.col .im{aspect-ratio:4/5}
+.col .t-cap{font-size:16px;margin-top:14px}
+.tabs{display:flex;justify-content:center;gap:28px}
+.tabs button{position:relative;border:0;background:none;padding:6px 0 10px;font-size:20px;font-weight:300;color:var(--mute);transition:color .3s var(--ease)}
+.tabs button:hover{color:var(--ink)}
+.tabs button::after{content:"";position:absolute;right:0;left:0;bottom:2px;height:1px;background:var(--ink);transform:scaleX(0);transition:transform .45s var(--ease)}
+.tabs button[aria-selected="true"]{color:var(--ink)}
+.tabs button[aria-selected="true"]::after{transform:scaleX(1)}
+[role="tabpanel"] .rail{margin-top:28px}
+
+/* inner pages */
+.page-head{padding:40px 0 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.page-head h1{font-size:28px}
+.kick{font-size:12px;font-weight:600;color:var(--mute)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px var(--pad) 18px;justify-content:safe center}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:38px;padding:0 14px;display:inline-flex;align-items:center;border:1px solid var(--line);font-size:12.5px;font-weight:500;background:#fff}
+.chip:hover{border-color:var(--ink)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 12px;padding-bottom:64px}
+.grid.c3{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 10px}
+.empty{padding:56px 0 88px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.crumbs{font-size:12px;color:var(--mute);padding-top:18px}
+.pd{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;padding:12px var(--pad) 24px}
+.gal{display:grid;grid-auto-flow:column;grid-auto-columns:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 calc(-1 * var(--pad))}
+.gal::-webkit-scrollbar{display:none}
+.gal .im{scroll-snap-align:start}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:12px}
+.dots span{width:6px;height:6px;border-radius:50%;background:#CFCFCF;transition:background-color .3s}
+.dots span.on{background:var(--ink)}
+.pd .im{aspect-ratio:1/1;background:var(--mist);overflow:hidden}
+.pd .im img{width:100%;height:100%;object-fit:cover}
+.pd-i{display:flex;flex-direction:column;gap:12px}
+.pd-i h1{font-size:26px}
+.sizes{display:flex;flex-wrap:wrap;gap:8px}
+.sizes .chip{min-width:50px;justify-content:center}
+details{border-top:1px solid var(--line)}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{list-style:none;min-height:54px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-size:14px;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:300;font-size:20px;transition:transform .4s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+.det{padding:0 0 18px;font-size:13.5px;color:var(--mute);line-height:2}
+.row{display:flex;justify-content:space-between;gap:16px;padding:6px 0}
+.row.total{border-top:1px solid var(--line);margin-top:6px;padding-top:12px;color:var(--ink);font-weight:500}
+.bag-item{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+.bag-item .im{aspect-ratio:1/1;background:var(--mist);overflow:hidden}.bag-item .im img{width:100%;height:100%;object-fit:cover}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line)}
+.qty button{width:40px;height:40px;border:0;background:#fff}
+.search-box{max-width:640px;margin:0 auto;position:relative}
+.search-box input{width:100%;height:56px;border:0;border-bottom:1px solid var(--ink);background:transparent;font-size:20px;font-weight:300;padding:0 36px 0 0;outline:none}
+.search-box svg{position:absolute;right:0;top:16px;width:22px;height:22px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+.steps li{border-top:1px solid var(--line);padding:16px 0;display:flex;flex-direction:column;gap:2px;font-size:14px;color:var(--mute)}
+.steps b{font-weight:500;color:var(--ink)}
+.steps i{font-style:normal;color:var(--accent)}
+
+/* footer: black, accordions on phones */
+.foot{background:var(--foot);color:#fff;margin-top:64px;padding:48px 0 calc(24px + var(--sb))}
+.foot .news{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding-bottom:36px}
+.foot .news h2{font-size:24px}
+.foot .news p{font-size:14px;color:rgba(255,255,255,.72)}
+.foot form{width:100%;max-width:420px;display:flex;align-items:flex-end;gap:12px;margin-top:10px}
+.foot form label{display:flex;flex-direction:column;flex:1;text-align:right;font-size:12px;color:rgba(255,255,255,.72)}
+.foot input{height:44px;border:0;border-bottom:1px solid rgba(255,255,255,.6);background:transparent;color:#fff;font-size:15px;outline:none;direction:ltr;text-align:right}
+.foot input::placeholder{color:rgba(255,255,255,.45)}
+.foot .btn{background:transparent;border-color:#fff;color:#fff;min-height:44px}.foot .btn:hover{background:#fff;color:var(--ink)}
+.fcols details{border:0;border-top:1px solid rgba(255,255,255,.16)}
+.fcols details:last-child{border-bottom:1px solid rgba(255,255,255,.16)}
+.fcols summary{min-height:64px;font-size:15px;font-weight:400}
+.fcols a{display:flex;align-items:center;min-height:36px;font-size:14px;color:rgba(255,255,255,.72)}
+.fcols a:hover{color:#fff}
+.fcols .in{padding-bottom:16px}
+.fbot{display:flex;flex-direction:column;align-items:center;gap:16px;padding-top:28px;font-size:12px;color:rgba(255,255,255,.6);text-align:center}
+.fbot .soc{display:flex;gap:6px}
+.fbot .soc .ib{color:#fff}
+.mark{border:1px dashed rgba(255,255,255,.35);padding:5px 10px}
+.foot .linkbtn{border:0;background:none;color:rgba(255,255,255,.85);text-decoration:underline;text-underline-offset:4px;font-size:12.5px;padding:6px}
+
+/* ---------- shared pieces ---------- */
+:root{--pearl:#F2F3F5;--pearl-2:#E9EAEE;--r-xl:28px;--r-lg:22px;--r-md:18px;--r-sm:14px;--float:0 18px 40px -18px rgba(18,18,28,.32)}
+.tabbar,.abar,.buybar,.splash,.appbar,.onb,.ov,.dots{display:none}
+.pc .sub,.pc .buy{display:none}
+.pc .buy-row{display:contents}
+a,button{touch-action:manipulation}
+.sh{font-size:18px;font-weight:400;margin:32px 0 14px}
+.sfield{display:flex;align-items:center;gap:10px;height:48px;padding:0 14px;background:var(--mist);color:var(--mute);font-size:15px}
+.sfield svg{width:20px;height:20px}
+.ratecard{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px;padding:14px;border:1px solid var(--line);font-size:13.5px;color:var(--mute)}
+.ratecard b{font-weight:500;color:var(--ink);margin-inline-start:auto}
+.live{flex:none;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(130,13,31,.45);animation:live 2.2s ease-out infinite}
+@keyframes live{70%{box-shadow:0 0 0 7px rgba(130,13,31,0)}100%{box-shadow:0 0 0 0 rgba(130,13,31,0)}}
+.crow{display:grid;grid-auto-flow:column;grid-auto-columns:240px;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 max(var(--pad),calc((100% - var(--max))/2 + var(--pad)));scroll-padding:0 max(var(--pad),calc((100% - var(--max))/2 + var(--pad)))}
+.crow::-webkit-scrollbar{display:none}
+.ccard{position:relative;scroll-snap-align:start;display:block;aspect-ratio:4/5;overflow:hidden;background:var(--mist);color:#fff;isolation:isolate}
+.ccard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1;transition:transform 1.2s var(--out)}
+.ccard:hover img{transform:scale(1.04)}
+.ccard::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0) 55%)}
+.ccard .ct{position:absolute;inset:auto 0 0 0;padding:18px;display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+.ccard b{display:block;font-size:19px;font-weight:700;line-height:1.4}
+.ccard small{font-size:12.5px;color:rgba(255,255,255,.82)}
+.ccard i{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#fff;color:var(--ink)}
+.ccard i svg{width:17px;height:17px}
+.list{border-top:1px solid var(--line)}
+.lrow{display:flex;align-items:center;gap:14px;width:100%;min-height:56px;padding:0;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink);font-size:15px;text-align:right}
+.lrow .lt{flex:1}
+.lrow>svg{width:18px;height:18px;color:#9A9A9A;flex:none}
+.lrow .li{display:grid;place-items:center;width:24px;flex:none}
+.lrow .li svg{width:22px;height:22px}
+.lrow .cnt{font-size:12.5px;color:var(--mute)}
+.sw{position:relative;flex:none;width:46px;height:28px;border-radius:14px;background:#D9D9D9;transition:background-color .25s var(--ease)}
+.sw::after{content:"";position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .3s var(--ease)}
+[aria-checked="true"] .sw{background:var(--ink)}
+[aria-checked="true"] .sw::after{transform:translateX(-18px)}
+.login{display:flex;flex-direction:column;gap:12px;padding:20px;background:var(--mist)}
+.login p{font-size:14px;color:var(--mute)}
+.login label{display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:var(--mute)}
+.login input{height:50px;border:1px solid var(--line);background:#fff;padding:0 14px;font-size:16px;direction:ltr;text-align:right;outline:none}
+.login input:focus{border-color:var(--ink)}
+.trust{display:flex;justify-content:center;gap:10px;margin-top:28px;font-size:12px;color:var(--mute)}
+.trust span{border:1px dashed var(--line);padding:6px 10px}
+.ver{text-align:center;font-size:12px;color:#9A9A9A;padding:14px 0 8px}
+.heart.pop svg,.sq.pop svg{animation:pop .4s var(--ease)}
+@keyframes pop{40%{transform:scale(1.3)}}
+.badge.bump{animation:pop .45s var(--ease)}
+/* metal colour swatches */
+.metal{display:flex;gap:12px}
+.metal button{position:relative;width:34px;height:34px;border-radius:50%;border:0;padding:0;background:var(--c)}
+.metal button::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1.5px solid transparent;transition:border-color .2s}
+.metal button[aria-checked="true"]::after{border-color:var(--ink)}
+/* checkout options */
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{position:relative;display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--line);cursor:pointer;transition:border-color .2s}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt .oi{flex:1;display:flex;flex-direction:column;line-height:1.7}
+.opt .oi b{font-weight:600;font-size:14.5px}
+.opt .oi span{font-size:12.5px;color:var(--mute)}
+.opt .op{font-size:13px;white-space:nowrap}
+.rd{flex:none;width:22px;height:22px;border-radius:50%;border:1.5px solid #C4C4CB;transition:border-color .2s,background .2s}
+.opt:has(input:checked){border-color:var(--ink)}
+.opt:has(input:checked) .rd{border-color:var(--ink);background:radial-gradient(circle,var(--ink) 0 5px,#fff 5.5px)}
+.opt:has(input:focus-visible){outline:1px solid var(--accent);outline-offset:3px}
+.addr{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--line)}
+.addr div{flex:1;display:flex;flex-direction:column;font-size:13px;color:var(--mute);line-height:1.8}
+.addr b{font-weight:600;font-size:14.5px;color:var(--ink)}
+.sumcard{display:flex;flex-direction:column;gap:6px;margin-top:24px}
+.notes{display:flex;flex-direction:column}
+.note{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.8}
+.note .li{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:14px;background:var(--pearl)}
+.note .li svg{width:20px;height:20px}
+.note small{display:block;color:var(--mute);font-size:12px}
+
+.install{position:fixed;z-index:50;inset-inline:12px;bottom:calc(12px + var(--sb));max-width:440px;margin-inline:auto;background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px -20px rgba(0,0,0,.35);display:grid;grid-template-columns:44px minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:12px;animation:up .5s var(--out) both}
+.install[hidden]{display:none}
+.install img{width:44px;height:44px}
+.install b{display:block;font-size:14px;font-weight:500}
+.install span{font-size:12px;color:var(--mute);line-height:1.6}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* bottom sheet */
+.sheet-bg{position:fixed;inset:0;z-index:70;display:flex;align-items:flex-end;justify-content:center;background:rgba(0,0,0,0);visibility:hidden;transition:background-color .35s var(--ease),visibility 0s linear .45s}
+.sheet-bg.open{background:rgba(0,0,0,.42);visibility:visible;transition-delay:0s}
+.sheet{width:100%;max-width:520px;max-height:88svh;overflow-y:auto;overscroll-behavior:contain;background:#fff;border-radius:24px 24px 0 0;padding:8px 22px calc(22px + var(--sb));display:flex;flex-direction:column;gap:14px;transform:translateY(100%);transition:transform .45s var(--ease)}
+.sheet-bg.open .sheet{transform:none}
+.grab{flex:none;width:38px;height:5px;border-radius:3px;background:#D6D6D6;align-self:center;margin-bottom:4px}
+.sheet h2{font-size:19px;font-weight:700}
+.sheet ol{margin:0;padding:0 20px 0 0;font-size:14px;line-height:2.1}
+.added{display:grid;grid-template-columns:76px minmax(0,1fr);gap:14px;align-items:center}
+.added .im{aspect-ratio:1/1;background:var(--pearl);border-radius:16px;overflow:hidden;isolation:isolate}
+.added .im img{width:100%;height:100%;object-fit:cover}
+.added div{display:flex;flex-direction:column;gap:2px;font-size:13.5px;color:var(--mute)}
+.added b{font-weight:600;font-size:15px;color:var(--ink)}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.toast{position:fixed;z-index:80;left:50%;bottom:calc(24px + var(--sb));transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;font-size:13.5px;padding:12px 18px;display:flex;gap:16px;align-items:center;transition:opacity .4s var(--ease),transform .4s var(--ease);max-width:calc(100% - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast a{text-decoration:underline;text-underline-offset:5px}
+
+/* ---------- phones: the app (rounded, pearl surfaces, heavy headings, black actions) ---------- */
+@media (max-width:899px){
+  html{-webkit-tap-highlight-color:transparent}
+  body{padding-bottom:calc(92px + var(--sb))}
+  .strip,.foot,.crumbs,.hdr{display:none !important}
+  h1,h2,h3{text-wrap:balance}
+  .btn{min-height:52px;border-radius:16px;font-size:14.5px;transition:transform .15s var(--ease),background-color .3s,color .3s,border-color .3s}
+  .btn.o{border-color:#D5D6DB}
+  .btn:active,.chip:active,.sq:active,.cpill:active,.ibtn:active{transform:scale(.97)}
+  .chip{border-radius:999px;border:0;background:var(--pearl);min-height:38px;padding:0 16px;font-weight:500;transition:transform .15s var(--ease),background-color .25s,color .25s}
+  .chip.on{background:var(--ink);color:#fff}
+  .tabbar,.abar,.buybar,.btn,.chip,.lrow,.cat,.pc .im,.ccard,.cpill,.mslide,.ctile,.sq{-webkit-user-select:none;user-select:none}
+  img{-webkit-touch-callout:none;-webkit-user-drag:none}
+  .im>img:not(.alt){transition:opacity .45s var(--ease),transform 1.2s var(--out)}
+  .im>img:not(.alt):not(.ld){opacity:0}
+
+  /* square icon buttons */
+  .sq{position:relative;display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:var(--r-sm);border:0;background:var(--pearl);color:var(--ink);transition:transform .15s var(--ease)}
+  .sq svg{width:22px;height:22px}
+  .sq .dot{position:absolute;top:10px;left:11px;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 2px var(--pearl)}
+  .sq[aria-pressed="true"] svg{fill:var(--accent);stroke:var(--accent)}
+
+  /* floating tab bar */
+  .tabbar{display:flex;gap:4px;position:fixed;z-index:40;inset-inline:12px;bottom:calc(10px + var(--sb));height:66px;padding:8px;border-radius:24px;background:rgba(24,24,26,.94);-webkit-backdrop-filter:saturate(1.6) blur(20px);backdrop-filter:saturate(1.6) blur(20px);box-shadow:var(--float);view-transition-name:tabbar}
+  .tabbar a{position:relative;flex:1 1 0;display:flex;align-items:center;justify-content:center;gap:6px;border-radius:17px;color:rgba(255,255,255,.62);font-size:12.5px;font-weight:600;white-space:nowrap;transition:flex-grow .4s var(--ease),background-color .3s var(--ease),color .3s}
+  .tabbar a.on{flex-grow:2.2;background:#fff;color:var(--ink)}
+  .tabbar svg{flex:none;width:23px;height:23px;transition:transform .2s var(--ease)}
+  .tabbar a.on svg{stroke-width:1.7}
+  .tabbar a:active svg{transform:scale(.86)}
+  .tabbar .lb{max-width:0;opacity:0;overflow:hidden;transition:max-width .4s var(--ease),opacity .25s}
+  .tabbar a.on .lb{max-width:90px;opacity:1}
+  .tabbar .badge{top:8px;left:calc(50% - 22px);box-shadow:0 0 0 2px #18181a}
+  .tabbar a.on .badge{display:none}
+  body.pdp{padding-bottom:calc(84px + var(--sb))}
+  body.pdp .tabbar{display:none}
+
+  /* app bars */
+  .appbar{display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:30;height:calc(62px + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 16px 0;background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.8) blur(20px);backdrop-filter:saturate(1.8) blur(20px)}
+  .appbar .logo{color:var(--ink)}
+  .appbar .logo svg{height:26px}
+  .appbar .acts{display:flex;gap:8px}
+  .appbar{transition:background-color .35s var(--ease),-webkit-backdrop-filter .35s,backdrop-filter .35s}
+  .appbar .logo,.appbar .sq{transition:color .35s var(--ease),background-color .35s var(--ease)}
+  .appbar.over{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+  .appbar.over .logo{color:#fff}
+  .appbar.over .sq{background:rgba(255,255,255,.18);color:#fff;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+  .appbar.over .sq .dot{box-shadow:0 0 0 2px rgba(255,255,255,.6)}
+  .abar{display:grid;grid-template-columns:52px minmax(0,1fr) 52px;align-items:center;position:sticky;top:0;z-index:30;height:calc(60px + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 12px 0;background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.8) blur(20px);backdrop-filter:saturate(1.8) blur(20px);border-bottom:1px solid transparent;transition:border-color .3s;view-transition-name:abar}
+  .abar.line{border-bottom-color:var(--line)}
+  .abar>:last-child{justify-self:end}
+  .abar .t{font-size:15px;font-weight:700;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;transform:translateY(4px);transition:opacity .25s,transform .25s var(--ease)}
+  .abar.line .t{opacity:1;transform:none}
+  .abar .sq{width:40px;height:40px;border-radius:13px}
+  body.pdp .abar{display:none}
+  .page-head{align-items:flex-start;text-align:right;padding:2px var(--pad) 16px;gap:2px}
+  .page-head h1{font-size:28px;font-weight:800;line-height:1.4}
+  .kick{font-weight:500}
+  .chips{justify-content:flex-start;gap:8px}
+
+  /* home */
+  .srow{display:flex;gap:10px;margin:4px 16px 0}
+  .srow .field{flex:1;display:flex;align-items:center;gap:10px;height:52px;padding:0 16px;border-radius:var(--r-md);background:var(--pearl);color:#8B8C94;font-size:14.5px}
+  .srow .field svg{width:20px;height:20px}
+  .srow .sq{width:52px;height:52px;border-radius:var(--r-md);background:var(--ink);color:#fff}
+  .mhero{position:relative;height:100svh;min-height:560px;margin-top:calc(-62px - env(safe-area-inset-top,0px));background:#1A0509;color:#fff;overflow:hidden}
+  .mtrack{display:flex;height:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+  .mtrack::-webkit-scrollbar{display:none}
+  .mslide{position:relative;flex:0 0 100%;height:100%;scroll-snap-align:start;scroll-snap-stop:always;overflow:hidden;color:#fff}
+  .mslide>img,.mslide>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .mslide::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(0,0,0,.42) 0%,rgba(0,0,0,0) 20%),linear-gradient(to top,rgba(0,0,0,.72) 0%,rgba(0,0,0,.34) 30%,rgba(0,0,0,0) 55%)}
+  .mslide .dc{position:absolute;z-index:1;inset:auto 0 0 0;padding:0 22px calc(132px + var(--sb));display:flex;flex-direction:column;align-items:flex-start;gap:8px;text-shadow:0 1px 16px rgba(0,0,0,.3)}
+  .mslide .dc b{font-size:30px;font-weight:800;line-height:1.35}
+  .mslide .dc>span{font-size:14px;line-height:1.85;color:rgba(255,255,255,.88);max-width:300px}
+  .mslide .dc>.ibtn,.promo .pt>.ibtn{color:var(--ink);text-shadow:none}
+  .ibtn{display:inline-flex;align-items:center;gap:12px;height:48px;margin-top:10px;padding-inline:20px 5px;border-radius:999px;background:#fff;color:var(--ink);font-size:14px;font-weight:600;transition:transform .15s var(--ease)}
+  .ibtn i{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--ink);color:#fff}
+  .ibtn i svg{width:17px;height:17px}
+  .mbars{position:absolute;z-index:2;inset-inline:22px;bottom:calc(104px + var(--sb));display:flex;gap:6px}
+  .mbars button{position:relative;flex:1;height:24px;border:0;background:none;padding:0}
+  .mbars button::before,.mbars i{content:"";position:absolute;inset-inline:0;top:10px;height:3px;border-radius:2px}
+  .mbars button::before{background:rgba(255,255,255,.36)}
+  .mbars i{background:#fff;transform:scaleX(0);transform-origin:right}
+  .mbars .done i{transform:scaleX(1)}
+  .mbars .run i{animation:bar-fill 6s linear forwards}
+  .mhero.hold .mbars .run i{animation-play-state:paused}
+  .srow{margin-top:20px}
+  .ctiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0 16px}
+  .ctile{position:relative;display:block;aspect-ratio:1/1.12;border-radius:var(--r-lg);overflow:hidden;background:var(--pearl);isolation:isolate;transition:opacity .15s}
+  .ctile:active{opacity:.85}
+  .ctile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+  .ctile::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.3) 34%,rgba(0,0,0,0) 58%)}
+  .ctile .ct{position:absolute;inset:auto 0 0 0;padding:14px 16px;display:flex;flex-direction:column;color:#fff;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+  .ctile b{font-size:19px;font-weight:800;line-height:1.4}
+  .ctile small{font-size:12.5px;color:rgba(255,255,255,.88)}
+  .ratepill{display:flex;align-items:center;gap:10px;margin:20px 16px 0;padding:14px 16px;border-radius:var(--r-md);background:var(--pearl);font-size:13px;color:var(--mute)}
+  .ratepill b{margin-inline-start:auto;font-weight:700;color:var(--ink)}
+  .ah{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:32px 16px 14px}
+  .ah h2{font-size:19px;font-weight:800}
+  .ah a{font-size:13px;font-weight:600;color:var(--mute);padding:6px 0}
+  .cpills{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding:0 16px}
+  .cpills::-webkit-scrollbar{display:none}
+  .cpill{flex:none;display:inline-flex;align-items:center;gap:9px;height:50px;padding-inline:6px 18px;border-radius:999px;background:var(--pearl);font-size:14px;font-weight:600;transition:transform .15s var(--ease)}
+  .cpill .ci{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#fff;overflow:hidden;isolation:isolate}
+  .cpill .ci img{width:100%;height:100%;object-fit:cover}
+  .cpill .ci svg{width:18px;height:18px}
+  .cpill.on{background:var(--ink);color:#fff}
+  .cpill.on .ci{background:rgba(255,255,255,.14);color:#fff}
+  .hrow{display:grid;grid-auto-flow:column;grid-auto-columns:46%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 16px;scroll-padding:0 16px}
+  .hrow::-webkit-scrollbar{display:none}
+  .crow{grid-auto-columns:72%;gap:12px;padding:0 16px;scroll-padding:0 16px}
+  .ccard{border-radius:var(--r-lg)}
+  .stagger{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px;padding:0 16px 30px}
+  .stagger .pc:nth-child(even){transform:translateY(30px)}
+  .promo{display:grid;grid-template-columns:minmax(0,1fr) 40%;margin:32px 16px 0;min-height:220px;border-radius:var(--r-xl);overflow:hidden;background:var(--ink);color:#fff}
+  .promo .pt{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;padding:22px 20px}
+  .promo b{font-size:20px;font-weight:800;line-height:1.5}
+  .promo .pt>span{font-size:13px;line-height:1.85;color:rgba(255,255,255,.72)}
+  .promo .ibtn{margin-top:6px;height:44px}
+  .promo .ibtn i{width:34px;height:34px}
+  .promo .pi{position:relative}
+  .promo .pi img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  /* product cards */
+  .pc{align-items:stretch;text-align:right}
+  .pc .im{border-radius:var(--r-md);background:var(--pearl)}
+  .pc .nm{font-size:14px;font-weight:700;padding:0;margin-top:10px;line-height:1.6}
+  .pc .sub{display:block;font-size:12px;color:#8B8C94}
+  .pc .buy-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}
+  .pc .pr{margin:0;font-size:13px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pc .buy{display:inline-flex;align-items:center;flex:none;height:32px;padding:0 14px;border-radius:999px;background:var(--ink);color:#fff;font-size:12px;font-weight:600}
+  .heart{top:8px;left:8px}
+  .heart::before{background:#fff;inset:5px}
+  .grid{gap:26px 12px}
+  .cat .im{border-radius:var(--r-md);background:var(--pearl)}
+  .cat{font-size:12.5px}
+
+  /* product page */
+  .pd{padding:0 0 24px;gap:20px}
+  .gal-wrap{position:relative;margin:calc(8px + env(safe-area-inset-top,0px)) 12px 0;border-radius:var(--r-xl);overflow:hidden;background:var(--pearl)}
+  .gal{margin:0}
+  .ov{display:flex;justify-content:space-between;position:absolute;z-index:2;top:12px;inset-inline:12px;pointer-events:none}
+  .ov .sq{pointer-events:auto;background:rgba(255,255,255,.92);box-shadow:0 8px 20px -10px rgba(0,0,0,.35)}
+  .dots{display:flex;position:absolute;z-index:2;bottom:14px;inset-inline:0;justify-content:center;gap:6px;margin:0}
+  .dots span{width:7px;height:7px;background:rgba(0,0,0,.18)}
+  .dots span.on{width:20px;border-radius:4px;background:var(--ink);transition:width .3s var(--ease)}
+  .pd-i{padding:0 16px;gap:14px}
+  .pd-i h1{font-size:24px;font-weight:800;line-height:1.45}
+  .pd .price{font-size:21px;font-weight:800}
+  .pd .wish-inline,.pd .add-inline{display:none}
+  .pd .sizes .chip{min-width:52px;border-radius:14px}
+  .dgroup{border-radius:var(--r-lg);background:var(--pearl);padding:0 16px}
+  .dgroup details{border-color:rgba(0,0,0,.07)}
+  .dgroup details:first-child{border-top:0}
+  .dgroup details:last-of-type{border-bottom:0}
+  .buybar{display:flex;align-items:center;gap:10px;position:fixed;z-index:40;inset:auto 0 0 0;padding:10px 16px calc(10px + var(--sb));background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);box-shadow:0 -10px 30px -22px rgba(0,0,0,.4);view-transition-name:buybar}
+  .buybar .sq{width:54px;height:54px;border-radius:var(--r-md)}
+  .buybar .btn{flex:1;min-height:54px;border-radius:var(--r-md)}
+
+  /* bag + checkout */
+  .bag-item{grid-template-columns:92px minmax(0,1fr);gap:14px;padding:12px;margin-bottom:12px;border:0;border-radius:var(--r-lg);background:var(--pearl)}
+  .bag-item .im{border-radius:var(--r-sm);background:#fff}
+  .qty{border:0;border-radius:999px;background:#fff;overflow:hidden}
+  .qty button{width:36px;height:36px;background:transparent}
+  .sumcard{padding:16px;border-radius:var(--r-lg);background:var(--pearl)}
+  .bag-cta{position:sticky;bottom:calc(84px + var(--sb));padding:12px var(--pad) 14px;margin:0 calc(-1 * var(--pad));background:linear-gradient(to top,#fff 70%,rgba(255,255,255,0))}
+  body.no-tabs .bag-cta{bottom:var(--sb)}
+  .opt,.addr{border-radius:var(--r-md)}
+  .sh{font-size:17px;font-weight:800;margin:26px 0 12px}
+
+  /* shop + account */
+  .sfield{border-radius:var(--r-md);background:var(--pearl)}
+  .ratecard{border:0;border-radius:var(--r-md);background:var(--pearl)}
+  .list{border:0;border-radius:var(--r-lg);background:var(--pearl);padding:0 16px}
+  .lrow{border-bottom-color:rgba(0,0,0,.07)}
+  .list>.lrow:last-child{border-bottom:0}
+  .login{border-radius:var(--r-lg);background:var(--pearl)}
+  .login input{border-radius:var(--r-sm);border-color:transparent}
+  .empty .btn{padding:0 32px}
+
+  .install{border-radius:20px;border:0}
+  .install,.toast{bottom:calc(88px + var(--sb))}
+  .toast{border-radius:14px}
+  body.pdp .toast,body.pdp .install{bottom:calc(84px + var(--sb))}
+
+  /* launch screen and first-run introduction */
+  html.splash-on .splash{display:grid;place-items:center;position:fixed;inset:0;z-index:200;background:var(--strip);color:#fff;animation:spl-out .55s var(--ease) 1.05s forwards}
+  .splash svg{height:46px;width:auto;animation:spl-in .9s var(--ease) both}
+  html.onb-on .onb{display:flex}
+  .onb{position:fixed;inset:0;z-index:150;flex-direction:column;justify-content:space-between;gap:20px;padding:calc(28px + env(safe-area-inset-top,0px)) 22px calc(22px + var(--sb));background:#fff;overflow:hidden}
+  .onb.bye{animation:onb-out .45s var(--ease) forwards}
+  .onb-stack{position:relative;flex:1;min-height:0}
+  .oc{position:absolute;top:50%;left:50%;width:min(62vw,280px);aspect-ratio:4/5;border-radius:var(--r-xl);overflow:hidden;background:var(--pearl);box-shadow:0 26px 50px -26px rgba(0,0,0,.45);border:6px solid #fff}
+  .oc img{width:100%;height:100%;object-fit:cover}
+  .oc.c1{z-index:3;transform:translate(-50%,-50%) rotate(-4deg);animation:oc1 .9s var(--ease) .15s both}
+  .oc.c2{z-index:2;transform:translate(-18%,-56%) rotate(7deg) scale(.92);animation:oc2 .9s var(--ease) .05s both}
+  .oc.c3{z-index:1;transform:translate(-84%,-44%) rotate(-11deg) scale(.86);animation:oc3 .9s var(--ease) both}
+  .onb-tx{display:flex;flex-direction:column;gap:12px}
+  .onb-tx h2{font-size:28px;font-weight:800;line-height:1.45}
+  .onb-tx p{font-size:14.5px;line-height:1.9;color:var(--mute)}
+  .onb-tx .btn{margin-top:8px}
+  .onb-tx .lnk{align-self:center;border:0;background:none;font-size:14px;font-weight:600;padding:10px 16px;color:var(--ink)}
+}
+@keyframes oc1{from{opacity:0;transform:translate(-50%,-30%) rotate(0deg)}}
+@keyframes oc2{from{opacity:0;transform:translate(-50%,-50%) rotate(0deg) scale(.92)}}
+@keyframes oc3{from{opacity:0;transform:translate(-50%,-50%) rotate(0deg) scale(.86)}}
+@keyframes onb-out{to{opacity:0;transform:translateY(24px)}}
+@keyframes spl-in{from{opacity:0;transform:scale(.94)}}
+@keyframes spl-out{to{opacity:0;visibility:hidden}}
+@media (display-mode: standalone){html{overscroll-behavior-y:contain}}
+
+/* page transitions (phones): push slides in from the left in RTL, pop slides back, tabs cross-fade */
+@media (max-width:899px) and (prefers-reduced-motion:no-preference){
+  ::view-transition-old(root),::view-transition-new(root){animation-duration:.44s;animation-timing-function:cubic-bezier(.32,.72,0,1);animation-fill-mode:both}
+  html[data-nav="push"]::view-transition-old(root){animation-name:vt-push-out}
+  html[data-nav="push"]::view-transition-new(root){animation-name:vt-push-in}
+  html[data-nav="pop"]::view-transition-old(root){animation-name:vt-pop-out;z-index:2}
+  html[data-nav="pop"]::view-transition-new(root){animation-name:vt-pop-in}
+  html[data-nav="tab"]::view-transition-old(root){animation:vt-fade-out .18s ease both}
+  html[data-nav="tab"]::view-transition-new(root){animation:vt-fade-in .26s ease .06s both}
+  ::view-transition-group(tabbar){animation:none}
+  ::view-transition-old(tabbar){display:none}
+  ::view-transition-new(tabbar){animation:none}
+}
+@keyframes vt-push-in{from{transform:translateX(-100%)}}
+@keyframes vt-push-out{to{transform:translateX(30%);filter:brightness(.9)}}
+@keyframes vt-pop-out{to{transform:translateX(-100%)}}
+@keyframes vt-pop-in{from{transform:translateX(30%);filter:brightness(.9)}}
+@keyframes vt-fade-out{to{opacity:0}}
+@keyframes vt-fade-in{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){html.splash-on .splash{display:none !important}}
+
+@media (min-width:900px){
+  :root{--pad:40px;--hdr:150px}
+  body{font-size:16px}
+  .t-hero{font-size:52px}
+  .t-sec{font-size:32px}
+  .t-feat{font-size:28px}
+  .t-cap{font-size:20px}
+  .hdr-row{height:96px;padding:0 36px}
+  .logo svg{height:58px}
+  .nav{display:flex;justify-content:center;flex-wrap:wrap;gap:0 30px;height:54px;align-items:center;font-size:13px;font-weight:500}
+  .nav a{position:relative;padding:12px 0}
+  .nav a::after{content:"";position:absolute;inset:auto 0 6px;height:1px;background:currentColor;transform:scaleX(0);transition:transform .5s var(--ease)}
+  .nav a:hover::after,.nav a.on::after{transform:scaleX(1)}
+  .m-only{display:none !important}
+  .hero{height:min(calc(100svh - 40px),880px);min-height:600px}
+  .sec{padding-top:64px}
+  .cats{grid-template-columns:repeat(9,minmax(0,1fr));gap:16px;margin-top:40px}
+  .duo{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  .tile .im{aspect-ratio:560/784}
+  .feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+  .feat .im{order:0}
+  .feat .tx{padding:0 56px}
+  .track{grid-auto-columns:calc((min(100vw,var(--max) + 80px) - 80px - 3*22px)/4);gap:22px;padding:0 max(var(--pad),calc((100% - var(--max))/2 + var(--pad)));scroll-padding:0 max(var(--pad),calc((100% - var(--max))/2 + var(--pad)))}
+  .arr{display:grid;place-items:center;position:absolute;top:calc(50% - 46px);width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;z-index:2;transition:opacity .3s}
+  .arr:disabled{opacity:0;pointer-events:none}
+  .arr.prev{right:16px}.arr.next{left:16px}
+  .cols{grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:40px}
+  .col .t-cap{font-size:18px;margin-top:18px}
+  .tabs{gap:40px}
+  .tabs button{font-size:24px}
+  .grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:44px 22px}
+  .grid.c3{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .pd{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:64px;align-items:start}
+  .gal{grid-auto-flow:row;grid-auto-columns:auto;gap:12px;overflow:visible;margin:0}
+  .dots{display:none}
+  .pd-i{position:sticky;top:176px}
+  .pd-i h1{font-size:32px}
+  .steps{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 24px}
+  .foot{padding-top:64px}
+  .foot .news{flex-direction:row;justify-content:space-between;align-items:flex-end;text-align:right;border-bottom:1px solid rgba(255,255,255,.16)}
+  .foot .news>div{display:flex;flex-direction:column;gap:8px}
+  .fcols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding-top:36px}
+  .fcols details,.fcols details:last-child{border:0}
+  .fcols summary{min-height:auto;font-size:13px;font-weight:600;margin-bottom:10px;pointer-events:none}
+  .fcols summary::after{display:none}
+  .fbot{flex-direction:row;justify-content:space-between;border-top:1px solid rgba(255,255,255,.16);margin-top:36px}
+  .bag-wrap{max-width:760px}
+  .list{max-width:760px}
+}
+@media (max-width:899px){.d-only{display:none !important}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+</style>
+<script>try{if(matchMedia('(max-width:899px)').matches){if(!localStorage.getItem('rasta2-onboarded')){document.documentElement.classList.add('onb-on');sessionStorage.setItem('rasta-splash','1')}else if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!sessionStorage.getItem('rasta-splash')){document.documentElement.classList.add('splash-on');sessionStorage.setItem('rasta-splash','1')}}}catch(e){}</script>
+</head>
+<body>
+<div class="splash" aria-hidden="true"><svg viewBox="198 560 388 142" role="img" aria-hidden="true" focusable="false"><path fill="currentColor" d="M223 619.0H236Q240.4 619.0 244.3 620.1Q248.2 621.2 251 623.5Q253.9 625.7 255.5 629.1Q257.2 632.6 257.2 637.3Q257.2 641.6 255.3 645.8Q253.3 650 249.7 652.7Q246.1 655.5 241 655.8Q243.4 656.7 245.7 659Q248 661.3 249.5 663.6Q249.6 663.7 250.7 665.4Q251.9 667.1 253.6 669.6Q255.4 672.1 257.2 674.5Q259 677 260.4 678.6Q262.5 681.1 264.3 682.7Q266.2 684.3 268.3 685.2Q270.4 686 273 686V687.0H265.5Q260.6 687.0 256.8 685.9Q253 684.7 250.2 682.6Q247.4 680.5 245.4 677.6Q244.8 676.8 243.7 675Q242.6 673.2 241.2 670.9Q239.9 668.6 238.6 666.4Q237.3 664.2 236.3 662.6Q235.4 660.9 235.1 660.3Q233.6 657.5 231.6 655.7Q229.6 653.9 227.4 653.8V652.8Q227.6 652.8 228.7 652.8Q229.9 652.9 231.4 652.8Q234 652.7 236.7 651.9Q239.5 651 241.7 648.7Q244 646.4 245 642.1Q245.3 641.1 245.4 639.7Q245.6 638.4 245.5 636.9Q245.3 630.1 242.1 626.5Q238.9 622.9 233.8 622.7Q231.8 622.6 229.6 622.6Q227.4 622.7 225.8 622.7Q224.2 622.7 223.9 622.7Q223.9 622.6 223.7 621.7Q223.5 620.8 223.2 619.9Q223 619.0 223 619.0ZM224.2 619.0V687.0H213.5V619.0ZM213.8 679.9V687.0H206.0V686Q206.1 686 206.6 686Q207.2 686 207.3 686Q209.8 686 211.6 684.2Q213.4 682.4 213.5 679.9ZM213.8 626.1H213.5Q213.4 623.6 211.6 621.8Q209.8 620 207.3 620Q207.2 620 206.6 620Q206.1 620 206.0 620V619.0H213.8ZM223.9 679.9H224.2Q224.2 682.4 226.1 684.2Q227.9 686 230.4 686Q230.5 686 231 686Q231.6 686 231.6 686V687.0H223.9ZM290.7 617.3 321 686.4H307.9L286.7 631.6ZM269.8 679.9Q269.1 681.9 269.6 683.2Q270.1 684.6 271.2 685.3Q272.3 686 273.5 686H274.4V687.0H254.2V686Q254.2 686 254.6 686Q255 686 255 686Q257.3 686 259.7 684.6Q262 683.2 263.6 679.9ZM290.7 617.3 291.3 626.8 267.1 686.7H260.6L285.6 628.8Q285.8 628.5 286.4 627.1Q287 625.6 287.8 623.7Q288.6 621.8 289.2 620Q289.8 618.3 289.8 617.3ZM302.5 662.3V665.8H273.1V662.3ZM305.3 679.9H318.2Q319.7 683.2 322.1 684.6Q324.5 686 326.7 686Q326.7 686 327.1 686Q327.5 686 327.5 686V687.0H300.8V686H301.7Q303.5 686 305 684.4Q306.5 682.8 305.3 679.9ZM336.9 617.6Q338.7 617.6 341.1 617.8Q343.5 618 345.9 618.4Q348.3 618.7 350.2 619Q352.1 619.4 352.9 619.8L352.2 631.8H351.3Q351.3 626.9 347.8 624.1Q344.3 621.2 338.9 621.2Q333.4 621.2 330 624.2Q326.6 627.2 326.6 631.4Q326.5 633.8 327.9 636.1Q329.3 638.4 332 640.3L350.8 655Q354.5 657.7 356.2 661.3Q357.9 664.9 357.7 669.2Q357.5 678 351.6 683.2Q345.7 688.4 335.5 688.4Q332.1 688.4 328.5 687.7Q324.9 687.1 321.9 685.9Q318.8 684.6 316.9 682.7Q316.4 680.9 316.4 678.2Q316.5 675.4 317.1 672.6Q317.8 669.7 318.7 667.6H319.6Q319.2 672.6 321.1 676.6Q323.1 680.6 326.9 682.8Q330.8 684.9 335.9 684.8Q341.8 684.6 345.4 681.3Q349.1 678.1 349.1 672.9Q349.1 670 347.7 667.7Q346.3 665.3 343.2 663.4L325.5 649.3Q321.3 646.4 319.6 642.5Q317.8 638.5 318.1 634.4Q318.3 629.8 320.5 626Q322.8 622.1 326.9 619.9Q331.1 617.6 336.9 617.6ZM352.9 618.6 352.8 620.7H343.3V618.6ZM385.1 619.3V687.0H374.3V619.3ZM409.4 618.9V622.4H350V618.9ZM409.4 622.2V631.9L408.4 631.8V630.5Q408.4 626.9 406.2 624.7Q404 622.5 400.5 622.4V622.2ZM409.4 617.2V620L397.5 618.9Q399.7 618.9 402.1 618.6Q404.4 618.3 406.5 617.9Q408.5 617.5 409.4 617.2ZM374.6 679.9V687.0H366.9V686Q366.9 686 367.5 686Q368.1 686 368.1 686Q370.6 686 372.4 684.2Q374.2 682.4 374.3 679.9ZM384.8 679.9H385.1Q385.2 682.4 386.9 684.2Q388.7 686 391.3 686Q391.3 686 391.9 686Q392.5 686 392.5 686V687.0H384.8ZM358.9 622.2V622.4Q355.3 622.5 353.2 624.7Q351 626.9 351 630.5V631.8L350 631.9V622.2ZM350 617.2Q351 617.5 353 617.9Q355 618.3 357.4 618.6Q359.8 618.9 361.9 618.9L350 620ZM431.2 617.3 461.6 686.4H448.4L427.2 631.6ZM410.3 679.9Q409.6 681.9 410.1 683.2Q410.6 684.6 411.7 685.3Q412.9 686 414 686H414.9V687.0H394.7V686Q394.7 686 395.1 686Q395.6 686 395.6 686Q397.8 686 400.2 684.6Q402.6 683.2 404.1 679.9ZM431.2 617.3 431.8 626.8 407.6 686.7H401.1L426.1 628.8Q426.3 628.5 426.9 627.1Q427.5 625.6 428.3 623.7Q429.1 621.8 429.7 620Q430.3 618.3 430.4 617.3ZM443.1 662.3V665.8H413.6V662.3ZM445.9 679.9H458.7Q460.2 683.2 462.6 684.6Q465 686 467.2 686Q467.2 686 467.6 686Q468 686 468 686V687.0H441.3V686H442.2Q444.1 686 445.5 684.4Q447 682.8 445.9 679.9Z"/><rect x="478" y="610" width="2.6" height="84" fill="currentColor"/><g transform="translate(338.4 482.1) scale(0.3)"><path fill="currentColor" fill-rule="evenodd" d="M554.8 689.2C555.0 687.6 556.0 684.4 557.1 682.0C559.0 677.7 559.0 677.6 558.8 666.4C558.6 655.2 558.6 655.2 555.6 647.4C552.5 639.7 547.3 629.7 544.0 625.3C543.0 624.0 541.0 620.9 539.5 618.3C535.4 611.1 532.4 606.1 529.4 601.3C523.5 591.9 519.4 582.7 518.2 576.0C515.6 561.4 517.3 549.2 523.8 535.8C527.1 529.0 528.2 527.4 531.4 524.6C537.5 519.3 539.9 520.8 537.6 528.5C535.8 534.7 536.0 540.0 538.6 547.5C539.8 551.0 541.7 555.2 542.8 556.8C544.0 558.4 546.0 561.5 547.3 563.8C551.2 570.6 555.9 578.4 564.9 593.1C569.0 600.0 572.5 606.4 573.0 608.0C573.3 608.9 574.8 612.4 576.4 615.7C578.8 620.8 579.4 623.0 580.7 631.2C582.2 640.6 582.2 640.8 581.0 646.2C580.3 649.2 579.7 654.6 579.7 658.3C579.6 664.5 579.4 665.3 577.5 669.0C573.7 676.1 558.7 692.0 555.8 692.0C554.7 692.0 554.6 691.6 554.8 689.2ZM594.0 649.1C594.0 648.7 595.1 646.1 596.4 643.3C597.7 640.6 599.4 636.2 600.1 633.7C602.4 624.8 601.3 609.0 597.9 603.4C597.0 602.0 595.4 599.3 594.3 597.3C593.2 595.4 591.1 592.2 589.6 590.1C588.2 588.0 584.9 582.9 582.4 578.7C579.9 574.4 577.1 570.2 576.3 569.2C575.5 568.2 574.1 565.7 573.4 563.7C572.6 561.6 571.2 558.5 570.3 556.6C567.2 550.5 567.5 542.6 571.1 535.7C572.1 533.8 573.0 530.8 573.2 528.6C573.5 524.8 573.5 524.8 571.3 524.4C568.4 523.8 567.6 523.2 564.5 519.1C561.8 515.5 561.0 513.2 560.3 506.8C559.7 501.8 558.9 500.6 555.6 499.7C553.0 498.9 553.0 498.9 553.2 489.0C553.5 478.2 552.8 472.5 550.7 468.7C550.0 467.4 548.0 463.8 546.3 460.7C544.6 457.6 542.0 453.0 540.5 450.6C538.9 448.1 536.1 443.5 534.1 440.3C532.1 437.0 528.9 431.9 526.9 428.9C522.0 421.5 514.4 406.5 513.3 402.0C512.1 397.5 512.2 376.7 513.4 371.7C513.8 369.9 516.0 364.8 518.3 360.4C524.2 348.8 529.5 342.0 532.8 342.0C534.3 342.0 534.4 344.7 533.0 354.1C531.8 362.2 532.5 369.9 534.9 374.7C537.6 380.0 541.8 387.1 543.5 389.4C544.4 390.7 546.0 393.3 547.0 395.3C548.0 397.3 549.4 399.6 550.0 400.3C550.7 401.1 552.3 403.8 553.7 406.3C555.0 408.9 556.6 411.6 557.3 412.3C560.4 416.0 567.1 428.7 569.5 435.8C571.9 442.9 572.1 444.2 572.5 452.9C572.9 463.0 572.3 466.2 567.6 479.5C566.7 482.0 566.0 485.1 566.0 486.4C566.0 488.7 566.0 488.7 570.8 488.5C575.7 488.3 575.7 488.3 577.7 485.2C578.8 483.5 580.9 480.8 582.3 479.1C583.8 477.5 585.7 475.2 586.6 474.0C588.3 471.8 592.5 469.3 594.6 469.3C596.2 469.3 597.0 470.8 597.5 474.6C597.8 476.4 598.6 478.4 599.8 479.9C605.2 486.6 606.7 489.0 607.6 492.1C609.3 497.7 608.4 499.8 600.5 507.6C595.0 513.1 593.4 515.2 591.6 519.2C587.4 528.3 587.4 528.4 591.2 536.3C593.1 540.0 595.3 544.0 596.2 545.1C597.0 546.1 598.5 548.2 599.3 549.7C600.2 551.1 601.9 553.5 603.0 555.0C604.2 556.5 605.7 558.6 606.3 559.8C606.9 561.0 608.3 563.0 609.4 564.3C611.4 566.6 614.4 571.9 618.7 580.7C625.8 595.5 625.5 594.4 626.0 601.6C626.3 605.3 627.0 609.5 627.6 610.9C628.2 612.3 628.7 614.1 628.7 614.8C628.7 617.5 625.7 621.7 619.9 627.3C616.5 630.4 612.2 635.0 610.3 637.4C604.3 644.9 594.0 652.3 594.0 649.1ZM734.7 503.4C734.7 502.7 735.6 501.3 736.7 500.2C739.3 497.6 743.0 483.5 742.4 478.3C741.4 470.0 738.1 462.9 729.5 450.7C722.0 440.1 716.2 426.4 716.9 421.1C717.1 419.6 717.6 415.0 717.9 411.0C718.8 400.8 721.8 392.6 726.0 389.1C729.8 385.9 731.6 386.9 732.8 392.9C733.3 395.6 734.2 397.7 735.8 399.6C737.0 401.1 738.8 403.8 739.7 405.7C740.7 407.5 742.2 409.9 743.1 410.9C744.0 412.0 745.3 414.0 746.0 415.4C746.7 416.8 749.8 421.1 752.7 425.1C755.7 429.0 759.3 434.5 760.6 437.3C762.0 440.1 763.6 443.3 764.3 444.5C766.7 449.0 767.3 463.2 765.4 469.9C764.4 473.2 758.3 482.4 754.0 487.1C751.9 489.3 749.2 492.5 748.1 494.1C746.9 495.8 744.8 497.8 743.4 498.6C742.0 499.4 740.0 501.0 739.0 502.3C737.1 504.9 734.7 505.5 734.7 503.4ZM771.3 478.1C771.3 477.4 771.8 475.4 772.3 473.7C773.7 468.9 774.3 455.9 773.4 450.1C772.7 446.2 772.1 444.7 770.0 442.0C768.4 440.1 767.0 437.3 766.4 435.0C765.8 432.6 764.6 430.3 763.5 429.1C762.4 427.9 760.7 425.6 759.7 424.0C758.7 422.3 757.1 420.2 756.3 419.3C755.5 418.4 754.3 416.3 753.6 414.7C753.0 413.0 751.7 410.7 750.8 409.4C749.2 407.2 746.9 403.3 741.0 392.5C739.4 389.7 737.2 386.6 736.1 385.6C734.5 384.3 734.0 383.3 734.0 381.5C734.0 380.1 733.6 375.8 733.2 371.9C732.6 366.4 732.6 362.7 733.1 356.4C733.8 348.7 734.1 347.7 736.9 341.8C738.6 338.3 740.0 335.2 740.0 335.0C740.0 334.1 746.7 323.9 748.6 321.8C750.5 319.7 753.8 319.3 754.5 321.1C754.7 321.7 754.4 324.4 753.8 327.3C751.8 336.5 752.6 345.6 756.0 352.1C756.8 353.6 759.3 357.8 761.5 361.4C763.8 365.0 766.5 369.3 767.5 371.1C768.5 372.9 770.0 375.3 770.9 376.5C771.7 377.7 774.1 381.7 776.3 385.5C778.4 389.2 781.2 393.9 782.4 395.8C786.2 401.7 791.1 412.2 792.1 416.3C793.5 422.5 793.3 443.2 791.7 448.3C791.1 450.5 790.2 452.7 789.9 453.1C789.5 453.6 788.4 456.2 787.3 459.0C785.7 463.3 783.6 467.4 778.9 475.2C776.9 478.4 771.3 480.6 771.3 478.1ZM748.0 295.8C748.0 293.5 750.9 288.4 752.6 287.6C754.6 286.6 756.9 287.4 757.2 289.1C757.3 290.0 756.2 291.6 753.7 293.9C749.8 297.6 748.0 298.2 748.0 295.8Z"/><line x1="540" y1="713" x2="773" y2="480" stroke="currentColor" stroke-width="4.6" stroke-linecap="round"/><line x1="757" y1="283" x2="717" y2="337" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/></g></svg></div>
+<div class="onb" id="onb" role="dialog" aria-modal="true" aria-labelledby="onb-t">
+  <div class="onb-stack" aria-hidden="true"><span class="oc c3"><img src="assets/img/feature_baluch.webp" alt="" loading="lazy"></span><span class="oc c2"><img src="assets/img/gift_heart.webp" alt="" loading="lazy"></span><span class="oc c1"><img src="assets/img/feature_iran.webp" alt="" loading="lazy"></span></div>
+  <div class="onb-tx">
+    <h2 id="onb-t">طلای ۱۸ عیار، از کارگاه رستا تا دستان شما</h2>
+    <p>قیمت هر قطعه با نرخ روز طلا، کالکشن‌های تازه و سفارش اختصاصی، همه در یک اپ.</p>
+    <button class="btn block" type="button" data-act="onb-done">شروع خرید</button>
+    <button class="lnk" type="button" data-act="onb-login">ورود به حساب</button>
+  </div>
+</div>
+<div class="strip" id="strip"><span>طلای ۱۸ عیار امروز: هر گرم <b>[نرخ]</b> تومان</span><a href="#visit">گفت‌وگو با مشاور</a><button class="x" type="button" data-act="strip-close" aria-label="بستن نوار بالا"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+
+<header class="hdr" id="hdr">
+  <div class="hdr-row">
+    <div class="grp">
+      <a class="ib" href="#search" aria-label="جست‌وجو"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6"/></svg></a>
+      <a class="ib d-only" href="#visit" aria-label="گالری رستا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg></a>
+    </div>
+    <a class="logo" id="logo" href="#home" aria-label="گالری طلای رستا، صفحه‌ی اصلی"><svg viewBox="198 560 388 142" role="img" aria-hidden="true" focusable="false"><path fill="currentColor" d="M223 619.0H236Q240.4 619.0 244.3 620.1Q248.2 621.2 251 623.5Q253.9 625.7 255.5 629.1Q257.2 632.6 257.2 637.3Q257.2 641.6 255.3 645.8Q253.3 650 249.7 652.7Q246.1 655.5 241 655.8Q243.4 656.7 245.7 659Q248 661.3 249.5 663.6Q249.6 663.7 250.7 665.4Q251.9 667.1 253.6 669.6Q255.4 672.1 257.2 674.5Q259 677 260.4 678.6Q262.5 681.1 264.3 682.7Q266.2 684.3 268.3 685.2Q270.4 686 273 686V687.0H265.5Q260.6 687.0 256.8 685.9Q253 684.7 250.2 682.6Q247.4 680.5 245.4 677.6Q244.8 676.8 243.7 675Q242.6 673.2 241.2 670.9Q239.9 668.6 238.6 666.4Q237.3 664.2 236.3 662.6Q235.4 660.9 235.1 660.3Q233.6 657.5 231.6 655.7Q229.6 653.9 227.4 653.8V652.8Q227.6 652.8 228.7 652.8Q229.9 652.9 231.4 652.8Q234 652.7 236.7 651.9Q239.5 651 241.7 648.7Q244 646.4 245 642.1Q245.3 641.1 245.4 639.7Q245.6 638.4 245.5 636.9Q245.3 630.1 242.1 626.5Q238.9 622.9 233.8 622.7Q231.8 622.6 229.6 622.6Q227.4 622.7 225.8 622.7Q224.2 622.7 223.9 622.7Q223.9 622.6 223.7 621.7Q223.5 620.8 223.2 619.9Q223 619.0 223 619.0ZM224.2 619.0V687.0H213.5V619.0ZM213.8 679.9V687.0H206.0V686Q206.1 686 206.6 686Q207.2 686 207.3 686Q209.8 686 211.6 684.2Q213.4 682.4 213.5 679.9ZM213.8 626.1H213.5Q213.4 623.6 211.6 621.8Q209.8 620 207.3 620Q207.2 620 206.6 620Q206.1 620 206.0 620V619.0H213.8ZM223.9 679.9H224.2Q224.2 682.4 226.1 684.2Q227.9 686 230.4 686Q230.5 686 231 686Q231.6 686 231.6 686V687.0H223.9ZM290.7 617.3 321 686.4H307.9L286.7 631.6ZM269.8 679.9Q269.1 681.9 269.6 683.2Q270.1 684.6 271.2 685.3Q272.3 686 273.5 686H274.4V687.0H254.2V686Q254.2 686 254.6 686Q255 686 255 686Q257.3 686 259.7 684.6Q262 683.2 263.6 679.9ZM290.7 617.3 291.3 626.8 267.1 686.7H260.6L285.6 628.8Q285.8 628.5 286.4 627.1Q287 625.6 287.8 623.7Q288.6 621.8 289.2 620Q289.8 618.3 289.8 617.3ZM302.5 662.3V665.8H273.1V662.3ZM305.3 679.9H318.2Q319.7 683.2 322.1 684.6Q324.5 686 326.7 686Q326.7 686 327.1 686Q327.5 686 327.5 686V687.0H300.8V686H301.7Q303.5 686 305 684.4Q306.5 682.8 305.3 679.9ZM336.9 617.6Q338.7 617.6 341.1 617.8Q343.5 618 345.9 618.4Q348.3 618.7 350.2 619Q352.1 619.4 352.9 619.8L352.2 631.8H351.3Q351.3 626.9 347.8 624.1Q344.3 621.2 338.9 621.2Q333.4 621.2 330 624.2Q326.6 627.2 326.6 631.4Q326.5 633.8 327.9 636.1Q329.3 638.4 332 640.3L350.8 655Q354.5 657.7 356.2 661.3Q357.9 664.9 357.7 669.2Q357.5 678 351.6 683.2Q345.7 688.4 335.5 688.4Q332.1 688.4 328.5 687.7Q324.9 687.1 321.9 685.9Q318.8 684.6 316.9 682.7Q316.4 680.9 316.4 678.2Q316.5 675.4 317.1 672.6Q317.8 669.7 318.7 667.6H319.6Q319.2 672.6 321.1 676.6Q323.1 680.6 326.9 682.8Q330.8 684.9 335.9 684.8Q341.8 684.6 345.4 681.3Q349.1 678.1 349.1 672.9Q349.1 670 347.7 667.7Q346.3 665.3 343.2 663.4L325.5 649.3Q321.3 646.4 319.6 642.5Q317.8 638.5 318.1 634.4Q318.3 629.8 320.5 626Q322.8 622.1 326.9 619.9Q331.1 617.6 336.9 617.6ZM352.9 618.6 352.8 620.7H343.3V618.6ZM385.1 619.3V687.0H374.3V619.3ZM409.4 618.9V622.4H350V618.9ZM409.4 622.2V631.9L408.4 631.8V630.5Q408.4 626.9 406.2 624.7Q404 622.5 400.5 622.4V622.2ZM409.4 617.2V620L397.5 618.9Q399.7 618.9 402.1 618.6Q404.4 618.3 406.5 617.9Q408.5 617.5 409.4 617.2ZM374.6 679.9V687.0H366.9V686Q366.9 686 367.5 686Q368.1 686 368.1 686Q370.6 686 372.4 684.2Q374.2 682.4 374.3 679.9ZM384.8 679.9H385.1Q385.2 682.4 386.9 684.2Q388.7 686 391.3 686Q391.3 686 391.9 686Q392.5 686 392.5 686V687.0H384.8ZM358.9 622.2V622.4Q355.3 622.5 353.2 624.7Q351 626.9 351 630.5V631.8L350 631.9V622.2ZM350 617.2Q351 617.5 353 617.9Q355 618.3 357.4 618.6Q359.8 618.9 361.9 618.9L350 620ZM431.2 617.3 461.6 686.4H448.4L427.2 631.6ZM410.3 679.9Q409.6 681.9 410.1 683.2Q410.6 684.6 411.7 685.3Q412.9 686 414 686H414.9V687.0H394.7V686Q394.7 686 395.1 686Q395.6 686 395.6 686Q397.8 686 400.2 684.6Q402.6 683.2 404.1 679.9ZM431.2 617.3 431.8 626.8 407.6 686.7H401.1L426.1 628.8Q426.3 628.5 426.9 627.1Q427.5 625.6 428.3 623.7Q429.1 621.8 429.7 620Q430.3 618.3 430.4 617.3ZM443.1 662.3V665.8H413.6V662.3ZM445.9 679.9H458.7Q460.2 683.2 462.6 684.6Q465 686 467.2 686Q467.2 686 467.6 686Q468 686 468 686V687.0H441.3V686H442.2Q444.1 686 445.5 684.4Q447 682.8 445.9 679.9Z"/><rect x="478" y="610" width="2.6" height="84" fill="currentColor"/><g transform="translate(338.4 482.1) scale(0.3)"><path fill="currentColor" fill-rule="evenodd" d="M554.8 689.2C555.0 687.6 556.0 684.4 557.1 682.0C559.0 677.7 559.0 677.6 558.8 666.4C558.6 655.2 558.6 655.2 555.6 647.4C552.5 639.7 547.3 629.7 544.0 625.3C543.0 624.0 541.0 620.9 539.5 618.3C535.4 611.1 532.4 606.1 529.4 601.3C523.5 591.9 519.4 582.7 518.2 576.0C515.6 561.4 517.3 549.2 523.8 535.8C527.1 529.0 528.2 527.4 531.4 524.6C537.5 519.3 539.9 520.8 537.6 528.5C535.8 534.7 536.0 540.0 538.6 547.5C539.8 551.0 541.7 555.2 542.8 556.8C544.0 558.4 546.0 561.5 547.3 563.8C551.2 570.6 555.9 578.4 564.9 593.1C569.0 600.0 572.5 606.4 573.0 608.0C573.3 608.9 574.8 612.4 576.4 615.7C578.8 620.8 579.4 623.0 580.7 631.2C582.2 640.6 582.2 640.8 581.0 646.2C580.3 649.2 579.7 654.6 579.7 658.3C579.6 664.5 579.4 665.3 577.5 669.0C573.7 676.1 558.7 692.0 555.8 692.0C554.7 692.0 554.6 691.6 554.8 689.2ZM594.0 649.1C594.0 648.7 595.1 646.1 596.4 643.3C597.7 640.6 599.4 636.2 600.1 633.7C602.4 624.8 601.3 609.0 597.9 603.4C597.0 602.0 595.4 599.3 594.3 597.3C593.2 595.4 591.1 592.2 589.6 590.1C588.2 588.0 584.9 582.9 582.4 578.7C579.9 574.4 577.1 570.2 576.3 569.2C575.5 568.2 574.1 565.7 573.4 563.7C572.6 561.6 571.2 558.5 570.3 556.6C567.2 550.5 567.5 542.6 571.1 535.7C572.1 533.8 573.0 530.8 573.2 528.6C573.5 524.8 573.5 524.8 571.3 524.4C568.4 523.8 567.6 523.2 564.5 519.1C561.8 515.5 561.0 513.2 560.3 506.8C559.7 501.8 558.9 500.6 555.6 499.7C553.0 498.9 553.0 498.9 553.2 489.0C553.5 478.2 552.8 472.5 550.7 468.7C550.0 467.4 548.0 463.8 546.3 460.7C544.6 457.6 542.0 453.0 540.5 450.6C538.9 448.1 536.1 443.5 534.1 440.3C532.1 437.0 528.9 431.9 526.9 428.9C522.0 421.5 514.4 406.5 513.3 402.0C512.1 397.5 512.2 376.7 513.4 371.7C513.8 369.9 516.0 364.8 518.3 360.4C524.2 348.8 529.5 342.0 532.8 342.0C534.3 342.0 534.4 344.7 533.0 354.1C531.8 362.2 532.5 369.9 534.9 374.7C537.6 380.0 541.8 387.1 543.5 389.4C544.4 390.7 546.0 393.3 547.0 395.3C548.0 397.3 549.4 399.6 550.0 400.3C550.7 401.1 552.3 403.8 553.7 406.3C555.0 408.9 556.6 411.6 557.3 412.3C560.4 416.0 567.1 428.7 569.5 435.8C571.9 442.9 572.1 444.2 572.5 452.9C572.9 463.0 572.3 466.2 567.6 479.5C566.7 482.0 566.0 485.1 566.0 486.4C566.0 488.7 566.0 488.7 570.8 488.5C575.7 488.3 575.7 488.3 577.7 485.2C578.8 483.5 580.9 480.8 582.3 479.1C583.8 477.5 585.7 475.2 586.6 474.0C588.3 471.8 592.5 469.3 594.6 469.3C596.2 469.3 597.0 470.8 597.5 474.6C597.8 476.4 598.6 478.4 599.8 479.9C605.2 486.6 606.7 489.0 607.6 492.1C609.3 497.7 608.4 499.8 600.5 507.6C595.0 513.1 593.4 515.2 591.6 519.2C587.4 528.3 587.4 528.4 591.2 536.3C593.1 540.0 595.3 544.0 596.2 545.1C597.0 546.1 598.5 548.2 599.3 549.7C600.2 551.1 601.9 553.5 603.0 555.0C604.2 556.5 605.7 558.6 606.3 559.8C606.9 561.0 608.3 563.0 609.4 564.3C611.4 566.6 614.4 571.9 618.7 580.7C625.8 595.5 625.5 594.4 626.0 601.6C626.3 605.3 627.0 609.5 627.6 610.9C628.2 612.3 628.7 614.1 628.7 614.8C628.7 617.5 625.7 621.7 619.9 627.3C616.5 630.4 612.2 635.0 610.3 637.4C604.3 644.9 594.0 652.3 594.0 649.1ZM734.7 503.4C734.7 502.7 735.6 501.3 736.7 500.2C739.3 497.6 743.0 483.5 742.4 478.3C741.4 470.0 738.1 462.9 729.5 450.7C722.0 440.1 716.2 426.4 716.9 421.1C717.1 419.6 717.6 415.0 717.9 411.0C718.8 400.8 721.8 392.6 726.0 389.1C729.8 385.9 731.6 386.9 732.8 392.9C733.3 395.6 734.2 397.7 735.8 399.6C737.0 401.1 738.8 403.8 739.7 405.7C740.7 407.5 742.2 409.9 743.1 410.9C744.0 412.0 745.3 414.0 746.0 415.4C746.7 416.8 749.8 421.1 752.7 425.1C755.7 429.0 759.3 434.5 760.6 437.3C762.0 440.1 763.6 443.3 764.3 444.5C766.7 449.0 767.3 463.2 765.4 469.9C764.4 473.2 758.3 482.4 754.0 487.1C751.9 489.3 749.2 492.5 748.1 494.1C746.9 495.8 744.8 497.8 743.4 498.6C742.0 499.4 740.0 501.0 739.0 502.3C737.1 504.9 734.7 505.5 734.7 503.4ZM771.3 478.1C771.3 477.4 771.8 475.4 772.3 473.7C773.7 468.9 774.3 455.9 773.4 450.1C772.7 446.2 772.1 444.7 770.0 442.0C768.4 440.1 767.0 437.3 766.4 435.0C765.8 432.6 764.6 430.3 763.5 429.1C762.4 427.9 760.7 425.6 759.7 424.0C758.7 422.3 757.1 420.2 756.3 419.3C755.5 418.4 754.3 416.3 753.6 414.7C753.0 413.0 751.7 410.7 750.8 409.4C749.2 407.2 746.9 403.3 741.0 392.5C739.4 389.7 737.2 386.6 736.1 385.6C734.5 384.3 734.0 383.3 734.0 381.5C734.0 380.1 733.6 375.8 733.2 371.9C732.6 366.4 732.6 362.7 733.1 356.4C733.8 348.7 734.1 347.7 736.9 341.8C738.6 338.3 740.0 335.2 740.0 335.0C740.0 334.1 746.7 323.9 748.6 321.8C750.5 319.7 753.8 319.3 754.5 321.1C754.7 321.7 754.4 324.4 753.8 327.3C751.8 336.5 752.6 345.6 756.0 352.1C756.8 353.6 759.3 357.8 761.5 361.4C763.8 365.0 766.5 369.3 767.5 371.1C768.5 372.9 770.0 375.3 770.9 376.5C771.7 377.7 774.1 381.7 776.3 385.5C778.4 389.2 781.2 393.9 782.4 395.8C786.2 401.7 791.1 412.2 792.1 416.3C793.5 422.5 793.3 443.2 791.7 448.3C791.1 450.5 790.2 452.7 789.9 453.1C789.5 453.6 788.4 456.2 787.3 459.0C785.7 463.3 783.6 467.4 778.9 475.2C776.9 478.4 771.3 480.6 771.3 478.1ZM748.0 295.8C748.0 293.5 750.9 288.4 752.6 287.6C754.6 286.6 756.9 287.4 757.2 289.1C757.3 290.0 756.2 291.6 753.7 293.9C749.8 297.6 748.0 298.2 748.0 295.8Z"/><line x1="540" y1="713" x2="773" y2="480" stroke="currentColor" stroke-width="4.6" stroke-linecap="round"/><line x1="757" y1="283" x2="717" y2="337" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/></g></svg></a>
+    <div class="grp end">
+      <a class="ib" href="#visit" aria-label="تماس و گفت‌وگو"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16v11H9.5L5 20v-3.5H4z"/></svg></a>
+      <a class="ib d-only" href="#account" aria-label="حساب من"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c1.2-3.6 4-5.4 7.2-5.4s6 1.8 7.2 5.4"/></svg></a>
+      <a class="ib d-only" href="#wish" aria-label="علاقه‌مندی‌ها"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true"><path d="M12 19.5s-7-4.3-8.8-8.6A4.6 4.6 0 0 1 12 6.8a4.6 4.6 0 0 1 8.8 4.1C19 15.2 12 19.5 12 19.5z"/></svg><span class="badge" data-wish-count></span></a>
+      <a class="ib d-only" href="#bag" aria-label="سبد خرید"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8.5h13l-1 11.5h-11z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="badge" data-bag-count></span></a>
+    </div>
+  </div>
+  <nav class="nav" id="topnav" aria-label="دسته‌های جواهرات"></nav>
+</header>
+
+<main id="view" tabindex="-1"></main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="news">
+      <div><h2>خبرهای رستا</h2><p>از مجموعه‌های تازه و نوسان قیمت طلا باخبر شوید.</p></div>
+      <form id="news-form" novalidate><label for="news-phone">شماره‌ی موبایل<input id="news-phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="۰۹۱۲ ۰۰۰ ۰۰۰۰"></label><button class="btn" type="submit">عضویت</button></form>
+    </div>
+    <div class="fcols" id="foot-cols"></div>
+    <div class="fbot">
+      <div class="soc"><a class="ib" href="#home" aria-label="اینستاگرام رستا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg></a><a class="ib" href="#home" aria-label="تلگرام رستا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 4.5 3.5 11l5.5 2 2 6 3-4 4.5 3.5z"/><path d="m9 13 8-5.5"/></svg></a></div>
+      <div style="display:flex;gap:8px"><span class="mark">[نماد اعتماد]</span><span class="mark">[نشان ساماندهی]</span></div>
+      <div><button class="linkbtn" type="button" data-act="install-help">نصب اپ رستا</button> · © ۱۴۰۵ گالری طلای رستا</div>
+    </div>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="پیمایش اپ">
+  <a href="#home" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20h-5v-6h-6v6H4z"/></svg><span class="lb">خانه</span></a>
+  <a href="#shop" data-tab="shop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5"/><rect x="13.5" y="4" width="6.5" height="6.5"/><rect x="4" y="13.5" width="6.5" height="6.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5"/></svg><span class="lb">فروشگاه</span></a>
+  <a href="#wish" data-tab="wish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true"><path d="M12 19.5s-7-4.3-8.8-8.6A4.6 4.6 0 0 1 12 6.8a4.6 4.6 0 0 1 8.8 4.1C19 15.2 12 19.5 12 19.5z"/></svg><span class="lb">علاقه‌مندی</span><span class="badge" data-wish-count></span></a>
+  <a href="#bag" data-tab="bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8.5h13l-1 11.5h-11z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg><span class="lb">سبد</span><span class="badge" data-bag-count></span></a>
+  <a href="#account" data-tab="account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c1.2-3.6 4-5.4 7.2-5.4s6 1.8 7.2 5.4"/></svg><span class="lb">حساب</span></a>
+</nav>
+
+<div class="install" id="install" hidden role="region" aria-label="نصب اپ">
+  <img src="assets/icons/icon-192.png" alt="">
+  <div><b>رستا روی گوشی شما</b><span>نصب کنید تا مثل یک اپ از صفحه‌ی اصلی باز شود.</span></div>
+  <button class="btn" type="button" data-act="install" style="min-height:38px;padding:0 16px">نصب</button>
+  <button class="ib" type="button" data-act="install-close" aria-label="بستن"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+</div>
+
+<div class="sheet-bg" id="sheet" aria-hidden="true">
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" tabindex="-1"><span class="grab" aria-hidden="true"></span><div id="sheet-body" style="display:flex;flex-direction:column;gap:14px"></div></div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+'use strict';
+const $ = (s) => document.querySelector(s);
+const fa = (n) => String(n).replace(/\d/g, (d) => '۰۱۲۳۴۵۶۷۸۹'[d]);
+const IMG = (n) => 'assets/img/' + n + '.webp';
+const LOGO = document.getElementById('logo').innerHTML;
+const ic = (d, w = 20) => `<svg width="${w}" height="${w}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const I = {
+  fwd: ic('<path d="m14 6-6 6 6 6"/>'), back: ic('<path d="m10 6 6 6-6 6"/>'), backLg: ic('<path d="m9 5 7 7-7 7"/>', 28),
+  heart: ic('<path d="M12 19.5s-7-4.3-8.8-8.6A4.6 4.6 0 0 1 12 6.8a4.6 4.6 0 0 1 8.8 4.1C19 15.2 12 19.5 12 19.5z"/>', 19),
+  heartLg: ic('<path d="M12 19.5s-7-4.3-8.8-8.6A4.6 4.6 0 0 1 12 6.8a4.6 4.6 0 0 1 8.8 4.1C19 15.2 12 19.5 12 19.5z"/>', 22),
+  search: ic('<circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6"/>', 22),
+  share: ic('<path d="M12 15V4M8 8l4-4 4 4"/><path d="M6 11H5v9h14v-9h-1"/>', 22),
+  pin: ic('<path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/>'),
+  chat: ic('<path d="M4 5.5h16v11H9.5L5 20v-3.5H4z"/>'), box: ic('<path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/>'),
+  home: ic('<path d="M4 10.5 12 4l8 6.5V20H4z"/>'), heartS: ic('<path d="M12 19.5s-7-4.3-8.8-8.6A4.6 4.6 0 0 1 12 6.8a4.6 4.6 0 0 1 8.8 4.1C19 15.2 12 19.5 12 19.5z"/>'),
+  pen: ic('<path d="M4 20l4-1 11-11-3-3L5 16z"/>'), bell: ic('<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5h4"/>'),
+  phone: ic('<path d="M7 3.5h10v17H7z"/><path d="M11 17.5h2"/>'), info: ic('<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8v.5"/>'),
+  shield: ic('<path d="M12 3.5 5 6v6c0 4 3 7 7 8.5 4-1.5 7-4.5 7-8.5V6z"/>'), doc: ic('<path d="M6 3.5h9l3 3v14H6z"/><path d="M9 11h6M9 14.5h6"/>'),
+  gift: ic('<path d="M4 9h16v4H4zM5.5 13h13v7h-13zM12 9v11"/><path d="M12 9c-1-3-5-4-5-1.5S12 9 12 9zm0 0c1-3 5-4 5-1.5S12 9 12 9z"/>'),
+  spark: ic('<path d="M12 3v5M12 16v5M3 12h5M16 12h5M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/>'),
+  arrow: ic('<path d="M19 12H5M11 6l-6 6 6 6"/>', 18), sliders: ic('<path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/>', 22),
+  grid: ic('<rect x="4.5" y="4.5" width="6" height="6" rx="1.5"/><rect x="13.5" y="4.5" width="6" height="6" rx="1.5"/><rect x="4.5" y="13.5" width="6" height="6" rx="1.5"/><rect x="13.5" y="13.5" width="6" height="6" rx="1.5"/>', 18),
+  bellLg: ic('<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5h4"/>', 22),
+  pause: '<svg class="pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>',
+  play: '<svg class="play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 5v14L6 12z"/></svg>'
+};
+
+const CATS = [
+  { slug: 'halghe', name: 'حلقه', img: 'pr/1' }, { slug: 'angoshtar', name: 'انگشتر', img: 'pr/3' },
+  { slug: 'dastband', name: 'دستبند', img: 'pr/6' }, { slug: 'bangle', name: 'بنگل', img: 'pr/14' },
+  { slug: 'alangoo', name: 'النگو', img: 'pr/16' }, { slug: 'goshvare', name: 'گوشواره', img: 'pr/17' },
+  { slug: 'gardanband', name: 'گردنبند', img: 'pr/20' }, { slug: 'pelak', name: 'پلاک', img: 'pr/29' },
+  { slug: 'accessory', name: 'اکسسوری', img: 'pr/35' }
+];
+/* [id, name, category, note, ring sizes?] — photo pr/<id>.webp on white, on-model pr/<id>m.webp */
+const P = [
+  [1, 'حلقه‌ی گره دوردیفه', 'halghe', 'دو رشته‌ی طلای زرد که در میانه گره می‌خورند.', 1],
+  [2, 'حلقه‌ی سیمی دوسر', 'halghe', 'حلقه‌ی ظریف سیمی با دو سر تخت.', 1],
+  [3, 'انگشتر گره نگین‌دار', 'angoshtar', 'گره‌ی طلای زرد با ردیفی از نگین روی آن.', 1],
+  [4, 'انگشتر گره', 'angoshtar', 'گره‌ی ساده و براق طلای زرد.', 1],
+  [5, 'انگشتر ضربدری دورنگ', 'angoshtar', 'ضربدرهای طلای زرد روی رکاب طلای سفید.', 1],
+  [6, 'دستبند زنجیر', 'dastband', 'حلقه‌های زنجیری درشت با گوی‌های طلا.'],
+  [7, 'دستبند زنجیر ریز', 'dastband', 'زنجیر ظریف با حلقه‌های گوی‌دار.'],
+  [8, 'دستبند زنجیر دوردور', 'dastband', 'زنجیر درشت که دو دور دور مچ می‌چرخد.'],
+  [9, 'دستبند خط', 'dastband', 'میله‌ی باریک طلا روی زنجیر ظریف.'],
+  [10, 'دستبند خط طلای رز', 'dastband', 'میله‌ی باریک طلای رز روی زنجیر ظریف.'],
+  [11, 'دستبند گره طلای رز', 'dastband', 'گره‌ی کوچک طلای رز روی زنجیر ظریف.'],
+  [12, 'دستبند نگین‌های پراکنده', 'dastband', 'زنجیر ظریف با نگین‌هایی در فاصله‌های برابر.'],
+  [13, 'دستبند قلب باز', 'dastband', 'آویز قلب باز روی زنجیر ظریف.'],
+  [14, 'بنگل سیمی پهن', 'bangle', 'بنگل سیمی با دو سر تخت و پهن.'],
+  [15, 'بنگل گره', 'bangle', 'بنگل سیمی با گره‌ی طلا در میانه.'],
+  [16, 'النگوی سیمی', 'alangoo', 'النگوی دوسیمه‌ی ظریف با دو سر تخت.'],
+  [17, 'گوشواره‌ی زنجیری', 'goshvare', 'دو حلقه‌ی زنجیری با گوی‌های طلا.'],
+  [18, 'گوشواره‌ی زنجیری بزرگ', 'goshvare', 'حلقه‌های زنجیری درشت با گوی‌های طلا.'],
+  [19, 'گوشواره‌ی قطره', 'goshvare', 'قطره‌ی براق طلا که دور لاله‌ی گوش می‌پیچد.'],
+  [20, 'گردنبند زنجیر درشت', 'gardanband', 'حلقه‌های زنجیری که به سمت میانه درشت‌تر می‌شوند.'],
+  [21, 'گردنبند زنجیر', 'gardanband', 'حلقه‌های زنجیری هم‌اندازه با گوی‌های طلا.'],
+  [22, 'گردنبند قلب و مروارید', 'gardanband', 'قلب باز و آویز مروارید روی زنجیر بلند.'],
+  [23, 'گردنبند گره نگین‌دار', 'gardanband', 'گره‌ی نگین‌دار روی زنجیر ظریف.'],
+  [24, 'گردنبند گره بلند', 'gardanband', 'گره‌ی طلا با دو سر نگین‌دار.'],
+  [25, 'گردنبند زنجیری طلای رز', 'gardanband', 'حلقه‌ی زنجیری طلای رز روی زنجیر دوتایی.'],
+  [26, 'گردنبند لبخند', 'gardanband', 'خط خمیده‌ی ظریف، مثل یک لبخند.'],
+  [27, 'گردنبند لبخند پهن', 'gardanband', 'خط خمیده‌ی پهن‌تر با دو سر تخت.'],
+  [28, 'گردنبند لبخند طلای رز', 'gardanband', 'خط خمیده‌ی طلای رز با دو سر تخت.'],
+  [29, 'پلاک قلب باز', 'pelak', 'قلب باز طلای زرد روی زنجیر ظریف.'],
+  [30, 'پلاک قلب باز کوچک', 'pelak', 'قلب باز کوچک روی زنجیر ظریف.'],
+  [31, 'پلاک دوحلقه', 'pelak', 'دو حلقه‌ی زنجیری در هم، روی زنجیر دوتایی.'],
+  [32, 'پلاک حرف', 'pelak', 'حرف دلخواه شما با طلای زرد.'],
+  [33, 'پلاک دانه', 'pelak', 'دانه‌ی توپر و براق طلا.'],
+  [34, 'پلاک دانه‌ی کوچک', 'pelak', 'دانه‌ی کوچک و براق طلا.'],
+  [35, 'دستبند بند قرمز با قلب', 'accessory', 'بند قرمز با قلب باز طلا.']
+].map(([id, name, cat, note, sizes]) => ({ id, name, cat, note, sizes: !!sizes, img: 'pr/' + id, alt: id === 29 ? null : 'pr/' + id + 'm' }));
+const COLS = [
+  { slug: 'iran-bastan', name: 'ایران باستان', img: 'feature_iran', ids: [14, 20, 8, 18, 33, 5, 6], feat: true },
+  { slug: 'baluchestan', name: 'بلوچستان', img: 'feature_baluch', ids: [35, 22, 12, 19, 30, 25, 13], feat: true },
+  { slug: 'zanjir', name: 'زنجیر', img: 'banner_m', ids: [6, 17, 20, 7, 18, 21, 8, 25, 31] },
+  { slug: 'gereh', name: 'گره', img: 'pr/4m', ids: [3, 23, 1, 24, 15, 4, 11] },
+  { slug: 'ghalb', name: 'قلب', img: 'p4', ids: [29, 22, 13, 30, 35] },
+  { slug: 'minimal', name: 'مینیمال', img: 'pr/26m', ids: [26, 9, 2, 33, 16, 27, 12, 19, 14, 32, 28, 10, 34, 5] }
+];
+const LISTS = {
+  loved: [23, 29, 6, 17, 3, 20, 19, 13, 33, 14, 22, 12],
+  best: [26, 29, 17, 3, 6, 16, 32, 19, 13, 24, 2],
+  fresh: [24, 25, 15, 11, 10, 28, 18, 31, 1],
+  gifts: [29, 26, 13, 35, 32, 17, 19, 23, 30, 12]
+};
+const byId = (id) => P.find((p) => p.id === +id);
+const colOf = (slug) => COLS.find((c) => c.slug === slug);
+const catOf = (slug) => CATS.find((c) => c.slug === slug);
+const app = matchMedia('(max-width: 899px)');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+const ROOTS = ['home', 'shop', 'wish', 'bag', 'account'];
+const SLIDES = [
+  { t: 'هدیه‌های یلدا', s: 'قطعه‌های منتخب برای بلندترین شب سال، در جعبه‌ی رستا و با کارت پیام.', c: 'دیدن هدیه‌ها', href: '#gifts-list', d: 'hero_d', m: 'poster_hero', video: true, alt: 'گردنبند طلا با آویز پرنده‌ی نگین‌دار' },
+  { t: 'کالکشن ایران باستان', s: 'نقش‌ها و فرم‌های کهن، با طلای ۱۸ عیار.', c: 'دیدن کالکشن', href: '#col-iran-bastan', d: 'hero_iran_d', m: 'feature_iran', mp: '64% 50%', alt: 'دو انگشتر زنجیری طلا روی ساتن فیروزه‌ای' },
+  { t: 'سفارش اختصاصی', s: 'طرح یا ایده‌ی شما، با اسکچ و مدل سه‌بعدی، ساخته‌شده در کارگاه رستا.', c: 'شروع سفارش', href: '#bespoke', d: 'hero_bespoke_d', m: 'hero_bespoke_m', mp: '54% 50%', alt: 'دستبند پهن طلا روی پارچه‌ی زرشکی' }
+];
+const METALS = [{ k: 'zard', n: 'زرد', c: 'linear-gradient(135deg,#F3DA9B,#C9A24F)' }, { k: 'sefid', n: 'سفید', c: 'linear-gradient(135deg,#F6F6F7,#BFC1C6)' }, { k: 'roz', n: 'رز', c: 'linear-gradient(135deg,#F4C9B6,#C98C74)' }];
+const metalName = (k) => (METALS.find((m) => m.k === k) || METALS[0]).n;
+
+const store = {
+  get(k, d) { try { const v = localStorage.getItem('rasta2-' + k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem('rasta2-' + k, JSON.stringify(v)); } catch (e) {} }
+};
+let wish = store.get('wish', []).filter((id) => P.some((p) => p.id === id)), bag = store.get('bag', []).filter((b) => P.some((p) => p.id === b.id));
+const bagCount = () => bag.reduce((s, x) => s + x.qty, 0);
+const saveWish = () => { store.set('wish', wish); counts(); };
+const saveBag = () => { store.set('bag', bag); counts(); };
+function counts() {
+  const n = bagCount();
+  document.querySelectorAll('[data-bag-count]').forEach((el) => { el.textContent = n ? fa(n) : ''; });
+  document.querySelectorAll('[data-wish-count]').forEach((el) => { el.textContent = wish.length ? fa(wish.length) : ''; });
+}
+const buzz = () => { try { if (navigator.vibrate) navigator.vibrate(8); } catch (e) {} };
+
+/* ---------- pieces ---------- */
+const catTile = (c) => `<a class="cat" href="#cat-${c.slug}"><span class="im"><img class="wb" src="${IMG(c.img)}" alt="" loading="lazy"></span><span>${c.name}</span></a>`;
+const pcard = (p) => `
+<article class="pc">
+  <a class="im" href="#p-${p.id}"><img class="wb" src="${IMG(p.img)}" alt="${p.name}" loading="lazy">${p.alt ? `<img class="alt" src="${IMG(p.alt)}" alt="" loading="lazy">` : ''}</a>
+  <button class="heart" type="button" data-act="wish" data-id="${p.id}" aria-pressed="${wish.includes(p.id)}" aria-label="افزودن ${p.name} به علاقه‌مندی‌ها">${I.heart}</button>
+  <a href="#p-${p.id}" class="nm">${p.name}</a>
+  <span class="sub">${catOf(p.cat).name}</span>
+  <div class="buy-row"><span class="pr">[قیمت] تومان</span><a class="buy" href="#p-${p.id}" tabindex="-1" aria-hidden="true">خرید</a></div>
+</article>`;
+const colTile = (c) => `<a class="tile col" href="#col-${c.slug}"><span class="im"><img src="${IMG(c.img)}" alt="" loading="lazy"></span><h3 class="t-cap">${c.name}</h3><span class="cta">خرید کنید</span></a>`;
+const colBig = (c) => `<a class="ccard" href="#col-${c.slug}"><img src="${IMG(c.img)}" alt="" loading="lazy"><span class="ct"><span><b>${c.name}</b><small>${fa(c.ids.length)} قطعه</small></span><i>${I.arrow}</i></span></a>`;
+const rail = (id, ids) => `
+<div class="rail">
+  <button class="arr prev" type="button" data-rail="${id}" data-dir="prev" aria-label="قبلی">${I.back}</button>
+  <div class="track" id="${id}" tabindex="0" aria-label="محصولات">${ids.map((i) => pcard(byId(i))).join('')}</div>
+  <button class="arr next" type="button" data-rail="${id}" data-dir="next" aria-label="بعدی">${I.fwd}</button>
+  <div class="prog" aria-hidden="true"><span data-prog="${id}"></span></div>
+</div>`;
+const abar = (title, o = {}) => `<div class="abar" id="abar">${o.root ? '<span></span>' : `<button class="ib back" type="button" data-act="back" aria-label="بازگشت">${I.backLg}</button>`}<div class="t" aria-hidden="true">${title}</div>${o.action || '<span></span>'}</div>`;
+const searchBtn = `<a class="ib" href="#search" aria-label="جست‌وجو">${I.search}</a>`;
+const lrow = (label, o = {}) => {
+  const inner = `${o.icon ? `<span class="li">${o.icon}</span>` : ''}<span class="lt">${label}</span>${o.extra || ''}${o.sw ? '<span class="sw" aria-hidden="true"></span>' : I.fwd}`;
+  if (o.href) return `<a class="lrow" href="${o.href}">${inner}</a>`;
+  return `<button class="lrow" type="button" data-act="${o.act}"${o.sw ? ` role="switch" aria-checked="${!!o.on}"` : ''}>${inner}</button>`;
+};
+const empty = (msg, href, cta) => `<div class="wrap empty"><p style="color:var(--mute)">${msg}</p><a class="btn" href="${href}">${cta}</a></div>`;
+
+/* ---------- views ---------- */
+function homeWeb() {
+  const n = SLIDES.length;
+  return `
+<section class="hero" id="hero" aria-roledescription="carousel" aria-label="معرفی‌های رستا">
+${SLIDES.map((s, k) => `  <div class="slide${k ? '' : ' on'}" role="group" aria-roledescription="slide" aria-label="${fa(k + 1)} از ${fa(n)}"${k ? ' aria-hidden="true"' : ''}><img src="${IMG(s.d)}" alt="${s.alt}"${k ? ' loading="lazy"' : ''}><div class="hero-copy">${k ? `<h2 class="t-hero">${s.t}</h2>` : `<h1 class="t-hero">${s.t}</h1>`}<p>${s.s}</p><a class="gbtn" href="${s.href}"${k ? ' tabindex="-1"' : ''}>${s.c}<i>${I.arrow}</i></a></div></div>`).join('\n')}
+  <div class="hero-ctl"><div class="bars">${SLIDES.map((s, k) => `<button type="button" class="${k ? '' : 'run'}" data-act="slide" data-k="${k}" aria-label="نمایش ${s.t}"><i></i></button>`).join('')}</div><button class="hp" type="button" data-act="hero-pause" aria-label="توقف نمایش خودکار" aria-pressed="false">${I.pause}${I.play}</button></div>
+</section>
+<section class="sec wrap" aria-labelledby="cat-t">
+  <h2 id="cat-t" class="t-sec">خرید بر اساس دسته</h2>
+  <div class="cats">${CATS.map(catTile).join('')}</div>
+</section>
+<section class="sec wrap duo" aria-label="پیشنهادها">
+  <a class="tile" href="#gifts-list"><span class="im"><img src="${IMG('gift_heart')}" alt="آویزهای قلب طلا در کشوی جواهر" loading="lazy"></span><h2 class="t-cap">هدیه برای او</h2><span class="cta">خرید کنید</span></a>
+  <a class="tile" href="#all"><span class="im"><img src="${IMG('edit_life')}" alt="انگشتر و دو النگوی طلای نگین‌دار روی دست" loading="lazy" style="object-position:50% 30%"></span><h2 class="t-cap">برای هر روز</h2><span class="cta">خرید کنید</span></a>
+</section>
+<section class="sec" aria-labelledby="f1-t"><div class="feat">
+  <div class="tx"><h2 id="f1-t" class="t-feat">کالکشن ایران باستان</h2><p class="t-body">نقش‌ها و فرم‌های کهن ایران، با طلای ۱۸ عیار.</p><a class="cta" href="#col-iran-bastan">دیدن کالکشن</a></div>
+  <div class="im"><img src="${IMG('feature_iran')}" alt="انگشترهای پروانه‌ای فیروزه و نگین روی دست" loading="lazy"></div>
+</div></section>
+<section class="sec" aria-labelledby="f2-t"><div class="feat">
+  <div class="im"><img src="${IMG('feature_baluch')}" alt="دستبند بافت طلا با سگک نگین‌دار و گل‌های زرد" loading="lazy"></div>
+  <div class="tx"><h2 id="f2-t" class="t-feat">کالکشن بلوچستان</h2><p class="t-body">بافت و رنگ سوزن‌دوزی بلوچ، در قطعه‌هایی از طلای ۱۸ عیار.</p><a class="cta" href="#col-baluchestan">دیدن کالکشن</a></div>
+</div></section>
+<section class="sec" aria-labelledby="loved-t">
+  <h2 id="loved-t" class="t-sec">محبوب‌ترین‌ها</h2>
+  ${rail('r-loved', LISTS.loved)}
+  <div class="more"><a class="cta" href="#loved-list">مشاهده‌ی همه</a></div>
+</section>
+<section class="sec wrap" aria-labelledby="col-t">
+  <h2 id="col-t" class="t-sec">کالکشن‌ها</h2>
+  <div class="cols">${COLS.filter((c) => !c.feat).map(colTile).join('')}</div>
+</section>
+<section class="sec" aria-label="تازه‌ها و پرفروش‌ترین‌ها">
+  <div class="tabs" role="tablist" aria-label="فهرست محصولات">
+    <button type="button" role="tab" id="tab-fresh" aria-selected="true" aria-controls="pane-fresh" data-act="pane">تازه‌ها</button>
+    <button type="button" role="tab" id="tab-best" aria-selected="false" aria-controls="pane-best" data-act="pane" tabindex="-1">پرفروش‌ترین‌ها</button>
+  </div>
+  <div role="tabpanel" id="pane-fresh" aria-labelledby="tab-fresh">${rail('r-fresh', LISTS.fresh)}<div class="more"><a class="cta" href="#new-list">مشاهده‌ی همه</a></div></div>
+  <div role="tabpanel" id="pane-best" aria-labelledby="tab-best" hidden>${rail('r-best', LISTS.best)}<div class="more"><a class="cta" href="#best-list">مشاهده‌ی همه</a></div></div>
+</section>`;
+}
+
+function homeApp() {
+  const cnt = (ids) => ids.map((i) => pcard(byId(i))).join('');
+  return `
+<header class="appbar over" id="appbar"><a class="logo" href="#home" aria-label="گالری طلای رستا، صفحه‌ی اصلی">${LOGO}</a><div class="acts"><a class="sq" href="#search" aria-label="جست‌وجو">${I.search}</a><button class="sq" type="button" data-act="notes" aria-label="اعلان‌ها">${I.bellLg}<span class="dot" aria-hidden="true"></span></button></div></header>
+<h1 class="sr">گالری طلای رستا</h1>
+<section class="mhero" id="mhero" aria-roledescription="carousel" aria-label="معرفی‌های رستا">
+  <div class="mtrack" id="mtrack">
+${SLIDES.map((s, k) => `    <a class="mslide" href="${s.href}" role="group" aria-roledescription="slide" aria-label="${fa(k + 1)} از ${fa(SLIDES.length)}: ${s.t}">${s.video ? `<video id="hero-vid" muted loop playsinline preload="none" poster="${IMG(s.m)}" aria-hidden="true"></video>` : `<img src="${IMG(s.m)}" alt=""${s.mp ? ` style="object-position:${s.mp}"` : ''}${k ? ' loading="lazy"' : ''}>`}<span class="dc"><b>${s.t}</b><span>${s.s}</span><span class="ibtn">${s.c}<i>${I.arrow}</i></span></span></a>`).join('\n')}
+  </div>
+  <div class="mbars">${SLIDES.map((s, k) => `<button type="button" class="${k ? '' : 'run'}" data-act="mslide" data-k="${k}" aria-label="نمایش ${s.t}"><i></i></button>`).join('')}</div>
+</section>
+<div class="ratepill"><i class="live" aria-hidden="true"></i><span>طلای ۱۸ عیار امروز</span><b>هر گرم [نرخ] تومان</b></div>
+<div class="ah"><h2>دسته‌ها</h2><a href="#shop">همه‌ی دسته‌ها</a></div>
+<nav class="cpills" aria-label="دسته‌ها"><a class="cpill on" href="#all"><span class="ci">${I.grid}</span>همه</a>${CATS.map((c) => `<a class="cpill" href="#cat-${c.slug}"><span class="ci"><img class="wb" src="${IMG(c.img)}" alt="" loading="lazy"></span>${c.name}</a>`).join('')}</nav>
+<div class="ah"><h2>تازه‌ها</h2><a href="#new-list">مشاهده‌ی همه</a></div>
+<div class="hrow">${cnt(LISTS.fresh)}</div>
+<div class="ah"><h2>دسته‌های اصلی</h2><a href="#shop">همه‌ی دسته‌ها</a></div>
+<div class="ctiles">${[['angoshtar', 'pr/3m'], ['gardanband', 'pr/21m'], ['goshvare', 'pr/17m'], ['dastband', 'pr/9m']].map(([slug, img]) => `<a class="ctile" href="#cat-${slug}"><img src="${IMG(img)}" alt="" loading="lazy"><span class="ct"><b>${catOf(slug).name}</b><small>${fa(P.filter((p) => p.cat === slug).length)} قطعه</small></span></a>`).join('')}</div>
+<div class="ah"><h2>کالکشن‌ها</h2><a href="#shop">همه‌ی کالکشن‌ها</a></div>
+<div class="crow">${COLS.map(colBig).join('')}</div>
+<div class="ah"><h2>محبوب‌ترین‌ها</h2><a href="#loved-list">مشاهده‌ی همه</a></div>
+<div class="stagger">${cnt(LISTS.loved.slice(0, 6))}</div>
+<a class="promo" href="#bespoke"><span class="pt"><b>طرح شما، ساخت کارگاه رستا</b><span>ایده یا عکس نمونه را بفرستید؛ اسکچ و مدل سه‌بعدی را پیش از ساخت می‌بینید.</span><span class="ibtn">شروع سفارش<i>${I.arrow}</i></span></span><span class="pi"><img src="${IMG('hero_bespoke_m')}" alt="" loading="lazy"></span></a>
+<div class="ah"><h2>پرفروش‌ترین‌ها</h2><a href="#best-list">مشاهده‌ی همه</a></div>
+<div class="hrow">${cnt(LISTS.best)}</div>`;
+}
+
+function listing(title, kick, items, active, set) {
+  const chips = set === 'cols'
+    ? `<div class="chips">${COLS.map((c) => `<a class="chip ${c.slug === active ? 'on' : ''}" href="#col-${c.slug}">${c.name}</a>`).join('')}</div>`
+    : `<div class="chips"><a class="chip ${active === 'all' ? 'on' : ''}" href="#all">همه</a>${CATS.map((c) => `<a class="chip ${c.slug === active ? 'on' : ''}" href="#cat-${c.slug}">${c.name}</a>`).join('')}</div>`;
+  const body = items.length ? `<div class="wrap grid">${items.map(pcard).join('')}</div>`
+    : `<div class="wrap empty"><p style="color:var(--mute)">قطعه‌های این دسته به‌زودی اضافه می‌شوند.</p><a class="cta" href="#all">همه‌ی جواهرات</a></div>`;
+  return `<div class="page-head wrap"><span class="kick">${kick}</span><h1>${title}</h1><span class="kick" style="font-weight:400">${fa(items.length)} قطعه</span></div>${chips}${body}`;
+}
+
+function product(p) {
+  const c = catOf(p.cat);
+  const sizes = p.sizes ? `<div style="display:flex;flex-direction:column;gap:8px"><span class="kick" id="sz-l">سایز</span><div class="sizes" role="group" aria-labelledby="sz-l">${[50, 52, 54, 56, 58, 60].map((s, i) => `<button class="chip ${i === 2 ? 'on' : ''}" type="button" data-act="size" aria-pressed="${i === 2}">${fa(s)}</button>`).join('')}</div></div>` : '';
+  const others = P.filter((x) => x.id !== p.id && x.cat === p.cat).concat(P.filter((x) => x.id !== p.id && x.cat !== p.cat)).slice(0, 8).map((x) => x.id);
+  const inWish = wish.includes(p.id);
+  const defMetal = /رز/.test(p.name) ? 'roz' : /سفید|دورنگ/.test(p.name + p.note) ? 'sefid' : 'zard';
+  return `
+<div class="wrap crumbs"><a href="#all">جواهرات</a> / <a href="#cat-${c.slug}">${c.name}</a> / <span>${p.name}</span></div>
+<div class="wrap pd">
+  <div class="gal-wrap"><div class="ov"><button class="sq" type="button" data-act="back" aria-label="بازگشت">${I.backLg}</button><button class="sq" type="button" data-act="share" aria-label="اشتراک‌گذاری">${I.share}</button></div><div class="gal" id="gal" tabindex="0" aria-label="تصویرهای ${p.name}"><div class="im"><img class="wb" src="${IMG(p.img)}" alt="${p.name}"></div>${p.alt ? `<div class="im"><img src="${IMG(p.alt)}" alt="${p.name} روی مدل" loading="lazy"></div>` : ''}</div>${p.alt ? '<div class="dots" aria-hidden="true"><span class="on"></span><span></span></div>' : ''}</div>
+  <div class="pd-i">
+    <span class="kick">${c.name}</span>
+    <h1>${p.name}</h1>
+    <span class="price" style="font-size:17px">[قیمت] تومان <span class="kick" style="font-weight:400">بر اساس نرخ امروز</span></span>
+    <p style="color:var(--mute);font-size:14.5px">${p.note} طلای ۱۸ عیار، [وزن] گرم.</p>
+    <div style="display:flex;flex-direction:column;gap:10px"><span class="kick" id="metal-l">رنگ طلا: ${metalName(defMetal)}</span><div class="metal" role="radiogroup" aria-labelledby="metal-l">${METALS.map((m) => `<button type="button" role="radio" data-act="metal" data-m="${m.k}" aria-checked="${m.k === defMetal}" aria-label="طلای ${m.n}" style="--c:${m.c}"></button>`).join('')}</div></div>
+    ${sizes}
+    <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
+      <button class="btn block add-inline" type="button" data-act="add" data-id="${p.id}">افزودن به سبد خرید</button>
+      <button class="btn o block wish-inline" type="button" data-act="wish" data-id="${p.id}" aria-pressed="${inWish}">${inWish ? 'در علاقه‌مندی‌ها' : 'افزودن به علاقه‌مندی‌ها'}</button>
+      <a class="cta" href="#visit" style="align-self:center">رزرو وقت برای دیدن در گالری</a>
+    </div>
+    <div class="dgroup" style="margin-top:8px">
+      <details open><summary>ریز قیمت</summary><div class="det">
+        <div class="row"><span>طلا ([وزن] گرم × نرخ روز)</span><span>[مبلغ]</span></div>
+        <div class="row"><span>اجرت ساخت</span><span>[مبلغ]</span></div>
+        <div class="row"><span>سود</span><span>[مبلغ]</span></div>
+        <div class="row"><span>مالیات بر ارزش افزوده</span><span>[مبلغ]</span></div>
+        <div class="row total"><span>قیمت نهایی</span><span>[قیمت] تومان</span></div>
+        <p style="margin-top:8px;font-size:12px">نرخ روز: هر گرم طلای ۱۸ عیار [نرخ] تومان · به‌روزرسانی [ساعت]</p>
+      </div></details>
+      <details><summary>جزئیات قطعه</summary><div class="det">${p.note} عیار ۷۵۰، با فاکتور رسمی و شناسنامه‌ی قطعه.</div></details>
+      <details><summary>ارسال، بازگشت و ضمانت</summary><div class="det">[شرایط ارسال، مهلت بازگشت و ضمانت رستا]</div></details>
+    </div>
+  </div>
+</div>
+<section class="sec"><h2 class="t-sec">شاید بپسندید</h2>${rail('r-more', others)}</section>
+<div class="buybar"><button class="sq" type="button" data-act="wish" data-id="${p.id}" aria-pressed="${inWish}" aria-label="افزودن به علاقه‌مندی‌ها">${I.heartLg}</button><button class="btn" type="button" data-act="add" data-id="${p.id}">افزودن به سبد خرید</button></div>`;
+}
+
+function bagView() {
+  if (!bag.length) return `<div class="page-head wrap"><h1>سبد خرید</h1></div>${empty('سبد خرید شما خالی است.', '#shop', 'خرید کنید')}`;
+  const items = bag.map((b, i) => { const p = byId(b.id); return `
+<div class="bag-item"><a class="im" href="#p-${p.id}"><img class="wb" src="${IMG(p.img)}" alt="${p.name}"></a>
+  <div style="display:flex;flex-direction:column;gap:4px;min-width:0"><a href="#p-${p.id}" style="font-size:14px">${p.name}</a><span class="kick" style="font-weight:400">طلای ${metalName(b.metal)} ۱۸ عیار${b.size ? '، سایز ' + fa(b.size) : ''}</span><span style="font-size:13.5px">[قیمت] تومان</span>
+  <span style="display:flex;align-items:center;gap:14px;margin-top:6px"><span class="qty"><button type="button" data-act="qty" data-i="${i}" data-d="1" aria-label="یکی بیشتر">+</button><span style="min-width:24px;text-align:center">${fa(b.qty)}</span><button type="button" data-act="qty" data-i="${i}" data-d="-1" aria-label="یکی کمتر">−</button></span><button class="cta" type="button" data-act="remove" data-i="${i}" style="border:0;background:none;padding:0">حذف</button></span></div></div>`; }).join('');
+  return `<div class="page-head wrap"><h1>سبد خرید</h1><span class="kick" style="font-weight:400">${fa(bagCount())} قطعه</span></div>
+<div class="wrap bag-wrap" style="display:flex;flex-direction:column;gap:20px;padding-bottom:24px"><div>${items}</div>
+<div class="sumcard"><div class="row"><span style="color:var(--mute)">جمع قطعه‌ها</span><span>[مبلغ] تومان</span></div><div class="row"><span style="color:var(--mute)">ارسال بیمه‌شده</span><span>[مبلغ] تومان</span></div><div class="row total"><span>قابل پرداخت</span><span>[قیمت] تومان</span></div><p class="kick" style="font-weight:400">قیمت نهایی هنگام پرداخت با نرخ روز طلا محاسبه می‌شود.</p>
+</div><div class="bag-cta"><a class="btn block" href="#checkout">ادامه‌ی خرید</a></div></div>`;
+}
+const opt = (name, val, title, sub, price, on) => `<label class="opt"><input type="radio" name="${name}" value="${val}"${on ? ' checked' : ''}><span class="oi"><b>${title}</b><span>${sub}</span></span>${price ? `<span class="op">${price}</span>` : ''}<span class="rd" aria-hidden="true"></span></label>`;
+const checkoutView = () => !bag.length ? `<div class="page-head wrap"><h1>تکمیل خرید</h1></div>${empty('سبد خرید شما خالی است.', '#shop', 'رفتن به فروشگاه')}` : `<div class="page-head wrap"><h1>تکمیل خرید</h1><span class="kick" style="font-weight:400">${fa(bagCount())} قطعه</span></div>
+<div class="wrap bag-wrap" style="padding-bottom:24px">
+<h2 class="sh">نشانی تحویل</h2>
+<div class="addr"><span class="li">${I.pin}</span><div><b>[نام گیرنده]</b><span>[نشانی کامل و کد پستی]</span></div><button class="cta" type="button" data-act="soon" style="border:0;background:none;padding:0">تغییر</button></div>
+<h2 class="sh">روش ارسال</h2>
+<div class="opts" role="radiogroup" aria-label="روش ارسال">${opt('ship', 'courier', 'پیک بیمه‌شده', '[زمان تحویل]', '[مبلغ] تومان', true)}${opt('ship', 'post', 'پست بیمه‌شده', '[زمان تحویل]', '[مبلغ] تومان')}${opt('ship', 'gallery', 'تحویل در گالری', '[نشانی گالری]', 'رایگان')}</div>
+<h2 class="sh">روش پرداخت</h2>
+<div class="opts" role="radiogroup" aria-label="روش پرداخت">${opt('pay', 'gateway', 'درگاه بانکی', 'همه‌ی کارت‌های عضو شتاب', '', true)}${opt('pay', 'gallery', 'پرداخت در گالری', 'هنگام تحویل حضوری', '')}</div>
+<div class="sumcard"><div class="row"><span style="color:var(--mute)">جمع قطعه‌ها</span><span>[مبلغ] تومان</span></div><div class="row"><span style="color:var(--mute)">ارسال</span><span>[مبلغ] تومان</span></div><div class="row total"><span>قابل پرداخت</span><span>[قیمت] تومان</span></div><p class="kick" style="font-weight:400">مبلغ نهایی هنگام پرداخت با نرخ روز طلا محاسبه می‌شود.</p></div>
+<div class="bag-cta"><button class="btn block" type="button" data-act="pay">پرداخت [قیمت] تومان</button></div>
+</div>`;
+const wishView = () => {
+  const items = wish.map(byId).filter(Boolean);
+  return items.length ? `<div class="page-head wrap"><h1>علاقه‌مندی‌ها</h1><span class="kick" style="font-weight:400">${fa(items.length)} قطعه</span></div><div class="wrap grid">${items.map(pcard).join('')}</div>`
+    : `<div class="page-head wrap"><h1>علاقه‌مندی‌ها</h1></div>${empty('هنوز قطعه‌ای را نشان نکرده‌اید. روی قلب کنار هر قطعه بزنید.', '#shop', 'خرید کنید')}`;
+};
+const shopView = () => `<div class="page-head wrap"><h1>فروشگاه</h1></div>
+<div class="wrap"><a class="sfield" href="#search">${I.search}<span>جست‌وجو در جواهرات</span></a>
+<div class="ratecard"><i class="live" aria-hidden="true"></i><span>طلای ۱۸ عیار امروز</span><b>هر گرم [نرخ] تومان</b></div>
+<h2 class="sh">دسته‌ها</h2><div class="cats" style="margin-top:0">${CATS.map(catTile).join('')}</div>
+<h2 class="sh">کالکشن‌ها</h2></div>
+<div class="crow">${COLS.map(colBig).join('')}</div>
+<div class="wrap" style="padding-bottom:24px"><h2 class="sh">منتخب</h2><div class="list">
+${lrow('همه‌ی جواهرات', { href: '#all', extra: `<span class="cnt">${fa(P.length)}</span>` })}${lrow('تازه‌ها', { href: '#new-list' })}${lrow('پرفروش‌ترین‌ها', { href: '#best-list' })}${lrow('محبوب‌ترین‌ها', { href: '#loved-list' })}${lrow('هدیه‌ها', { href: '#gifts-list' })}${lrow('سفارش اختصاصی', { href: '#bespoke' })}
+</div></div>`;
+const accountView = () => `<div class="page-head wrap"><h1>حساب من</h1></div>
+<div class="wrap" style="padding-bottom:16px">
+<form class="login" id="login-form" novalidate><b style="font-weight:500;font-size:16px">ورود یا ثبت‌نام</b><p>با شماره‌ی موبایل وارد شوید تا سفارش‌ها و علاقه‌مندی‌ها روی همه‌ی دستگاه‌هایتان همراهتان باشد.</p>
+<label for="login-phone">شماره‌ی موبایل<input id="login-phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="۰۹۱۲ ۰۰۰ ۰۰۰۰"></label><button class="btn block" type="submit">دریافت کد ورود</button></form>
+<h2 class="sh">خرید</h2><div class="list">
+${lrow('سفارش‌های من', { href: '#orders', icon: I.box })}${lrow('علاقه‌مندی‌ها', { href: '#wish', icon: I.heartS, extra: wish.length ? `<span class="cnt">${fa(wish.length)}</span>` : '' })}${lrow('نشانی‌ها', { act: 'soon', icon: I.home })}
+</div>
+<h2 class="sh">گالری رستا</h2><div class="list">
+${lrow('رزرو وقت بازدید', { href: '#visit', icon: I.pin })}${lrow('گفت‌وگو با مشاور', { href: '#visit', icon: I.chat })}${lrow('سفارش اختصاصی', { href: '#bespoke', icon: I.pen })}
+</div>
+<h2 class="sh">تنظیمات</h2><div class="list">
+${lrow('اعلان تغییر نرخ طلا', { act: 'notify', icon: I.bell, sw: true, on: store.get('notify', false) })}${standalone ? '' : lrow('نصب اپ رستا', { act: 'install-help', icon: I.phone })}${lrow('معرفی اپ', { act: 'onb-show', icon: I.spark })}
+</div>
+<h2 class="sh">درباره</h2><div class="list">
+${lrow('داستان رستا', { act: 'soon', icon: I.info })}${lrow('ضمانت و اصالت', { act: 'soon', icon: I.shield })}${lrow('قوانین و حریم خصوصی', { act: 'soon', icon: I.doc })}
+</div>
+<div class="trust"><span>[نماد اعتماد]</span><span>[نشان ساماندهی]</span></div>
+<p class="ver">نسخه‌ی ۱.۰ · © ۱۴۰۵ گالری طلای رستا</p>
+</div>`;
+const ordersView = () => `<div class="page-head wrap"><h1>سفارش‌های من</h1></div>${empty('هنوز سفارشی ثبت نکرده‌اید. سفارش‌ها و وضعیت ارسال اینجا دیده می‌شوند.', '#shop', 'رفتن به فروشگاه')}`;
+const searchView = () => `<div class="page-head wrap"><h1>جست‌وجو</h1></div>
+<div class="wrap"><div class="search-box"><label for="q" class="sr">جست‌وجو در جواهرات</label>${I.search}<input id="q" type="search" placeholder="مثلاً گوشواره یا انگشتر" autocomplete="off" enterkeyhint="search"></div>
+<div class="chips" style="padding:20px 0 18px">${['گوشواره', 'النگو', 'حلقه', 'پلاک', 'نگین', 'طلای رز'].map((t) => `<button class="chip" type="button" data-act="q" data-q="${t}">${t}</button>`).join('')}</div></div>
+<div class="wrap grid" id="results" style="padding-top:8px"></div>`;
+const visitView = () => `<div class="page-head wrap"><span class="kick">گالری رستا</span><h1>از نزدیک ببینید</h1></div>
+<div class="wrap" style="max-width:640px;display:flex;flex-direction:column;gap:16px;padding-bottom:24px"><p style="color:var(--mute)">قطعه‌ها را در گالری ببینید و با مشاوران ما درباره‌ی هدیه، سایز یا سفارش اختصاصی گفت‌وگو کنید.</p><p>[نشانی گالری]<br>[ساعات کار] · [تلفن]</p><button class="btn" type="button" data-act="book">رزرو وقت بازدید</button></div>`;
+const bespokeView = () => `<div class="page-head wrap"><span class="kick">سفارش اختصاصی</span><h1>از ایده‌ی شما، تا قطعه‌ای یگانه</h1></div>
+<div class="wrap" style="display:flex;flex-direction:column;gap:24px;padding-bottom:24px"><p style="color:var(--mute);max-width:560px">طرح یا ایده‌تان را با ما در میان بگذارید. طراحان رستا آن را به اسکچ و مدل سه‌بعدی تبدیل می‌کنند و پس از تأیید شما، قطعه در کارگاه ساخته می‌شود.</p>
+<ol class="steps"><li><b><i>۰۱</i> · گفت‌وگو</b>ایده، عکس نمونه یا بودجه را بفرستید، یا حضوری بیایید.</li><li><b><i>۰۲</i> · طراحی</b>اسکچ و مدل سه‌بعدی را می‌بینید و تغییر می‌دهید.</li><li><b><i>۰۳</i> · ساخت</b>پس از تأیید، قطعه در کارگاه ساخته و پرداخت می‌شود.</li><li><b><i>۰۴</i> · تحویل</b>در جعبه‌ی رستا، حضوری یا با ارسال.</li></ol>
+<a class="btn" href="#visit">شروع سفارش</a></div>`;
+
+/* ---------- header + status-bar colour ---------- */
+const hdr = $('#hdr'), themeMeta = $('meta[name="theme-color"]');
+let onHome = true;
+function headerState() {
+  const over = onHome && scrollY < 8;
+  hdr.classList.toggle('over', over); hdr.classList.toggle('solid', !over);
+  const ab = document.getElementById('appbar'), mh = document.getElementById('mhero');
+  const appOver = !!(ab && mh) && scrollY < mh.offsetHeight * 0.45;
+  if (ab) ab.classList.toggle('over', appOver);
+  if (themeMeta) themeMeta.content = app.matches ? (appOver ? '#000000' : '#FFFFFF') : '#820D1F';
+}
+addEventListener('scroll', headerState, { passive: true });
+
+/* ---------- router ---------- */
+const view = $('#view');
+const key = () => { let h = (location.hash || '#home').slice(1) || 'home'; if (h === 'cats') h = 'shop'; return h; };
+const tabOf = (h) => (ROOTS.includes(h) ? h : h === 'checkout' ? 'bag' : /^(orders|visit|bespoke)$/.test(h) ? 'account' : 'shop');
+function parentOf(h) {
+  if (h.startsWith('p-') && byId(h.slice(2))) return 'cat-' + byId(h.slice(2)).cat;
+  if (/^(orders|visit|bespoke)$/.test(h)) return 'account';
+  if (h === 'search') return 'home';
+  if (h === 'checkout') return 'bag';
+  return 'shop';
+}
+let stack = [], mem = {}, cur = null, forced = null, io = null, heroT = null;
+
+function route(h, y) {
+  let html, bar = null, title = 'گالری طلای رستا', pdp = false;
+  onHome = false;
+  clearTimeout(heroT); heroT = null;
+  if (h === 'home') { html = app.matches ? homeApp() : homeWeb(); onHome = true; }
+  else if (h === 'shop') { bar = ['فروشگاه', { root: true, action: searchBtn }]; html = shopView(); title = 'فروشگاه · رستا'; }
+  else if (h === 'all') { bar = ['همه‌ی جواهرات', { action: searchBtn }]; html = listing('همه‌ی جواهرات', 'جواهرات', P, 'all'); }
+  else if (h === 'new-list') { bar = ['تازه‌ها', { action: searchBtn }]; html = listing('تازه‌ها', 'جواهرات', LISTS.fresh.map(byId), ''); title = 'تازه‌ها · رستا'; }
+  else if (h === 'loved-list') { bar = ['محبوب‌ترین‌ها', { action: searchBtn }]; html = listing('محبوب‌ترین‌ها', 'جواهرات', LISTS.loved.map(byId), ''); title = 'محبوب‌ترین‌ها · رستا'; }
+  else if (h === 'best-list') { bar = ['پرفروش‌ترین‌ها', { action: searchBtn }]; html = listing('پرفروش‌ترین‌ها', 'جواهرات', LISTS.best.map(byId), ''); title = 'پرفروش‌ترین‌ها · رستا'; }
+  else if (h === 'gifts-list') { bar = ['هدیه‌ها', { action: searchBtn }]; html = listing('هدیه‌ها', 'هدیه', LISTS.gifts.map(byId), ''); title = 'هدیه‌ها · رستا'; }
+  else if (h.startsWith('col-') && colOf(h.slice(4))) { const c = colOf(h.slice(4)); bar = ['کالکشن ' + c.name, { action: searchBtn }]; html = listing('کالکشن ' + c.name, 'کالکشن‌ها', c.ids.map(byId), c.slug, 'cols'); title = 'کالکشن ' + c.name + ' · رستا'; }
+  else if (h.startsWith('cat-') && catOf(h.slice(4))) { const c = catOf(h.slice(4)); bar = [c.name, { action: searchBtn }]; html = listing(c.name, 'جواهرات', P.filter((p) => p.cat === c.slug), c.slug); title = c.name + ' · رستا'; }
+  else if (h.startsWith('p-') && byId(h.slice(2))) { const p = byId(h.slice(2)); bar = [p.name, { action: `<button class="ib" type="button" data-act="share" aria-label="اشتراک‌گذاری">${I.share}</button>` }]; html = product(p); title = p.name + ' · رستا'; pdp = true; }
+  else if (h === 'search') { bar = ['جست‌وجو']; html = searchView(); title = 'جست‌وجو · رستا'; }
+  else if (h === 'wish') { bar = ['علاقه‌مندی‌ها', { root: true }]; html = wishView(); title = 'علاقه‌مندی‌ها · رستا'; }
+  else if (h === 'bag') { bar = ['سبد خرید', { root: true }]; html = bagView(); title = 'سبد خرید · رستا'; }
+  else if (h === 'account') { bar = ['حساب من', { root: true }]; html = accountView(); title = 'حساب من · رستا'; }
+  else if (h === 'orders') { bar = ['سفارش‌های من']; html = ordersView(); title = 'سفارش‌های من · رستا'; }
+  else if (h === 'visit') { bar = ['گالری رستا']; html = visitView(); title = 'گالری رستا'; }
+  else if (h === 'bespoke') { bar = ['سفارش اختصاصی']; html = bespokeView(); title = 'سفارش اختصاصی · رستا'; }
+  else if (h === 'checkout') { bar = ['تکمیل خرید']; html = checkoutView(); title = 'تکمیل خرید · رستا'; }
+  else { html = app.matches ? homeApp() : homeWeb(); onHome = true; }
+  view.innerHTML = (bar ? abar(bar[0], bar[1]) : '') + html;
+  document.title = title;
+  document.body.classList.toggle('is-home', onHome);
+  document.body.classList.toggle('pdp', pdp);
+  const tab = ROOTS.includes(stack[0]) ? stack[0] : tabOf(h);
+  document.querySelectorAll('.tabbar a').forEach((a) => { const on = a.dataset.tab === tab; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+  document.querySelectorAll('#topnav a').forEach((a) => a.classList.toggle('on', a.getAttribute('href') === '#' + h));
+  markLoaded();
+  window.scrollTo(0, y || 0);
+  headerState(); bindRails(); bindHero(); bindGallery(); bindTitle(); bindSlides(); bindDeck();
+  if (h === 'search') bindSearch();
+}
+const rerender = () => route(cur, scrollY);
+
+function onNav() {
+  const h = key();
+  if (h === cur) return;
+  let nav = forced;
+  forced = null;
+  if (!nav) nav = stack.length > 1 && stack[stack.length - 2] === h ? 'pop' : ROOTS.includes(h) ? 'tab' : 'push';
+  if (nav === 'pop') stack.pop(); else if (nav === 'tab') stack = [h]; else stack.push(h);
+  if (cur !== null) mem[cur] = scrollY;
+  const y = nav === 'push' ? 0 : (mem[h] || 0);
+  const first = cur === null;
+  cur = h;
+  closeSheet();
+  const run = () => route(h, y);
+  if (!first && app.matches && !reduced.matches && document.startViewTransition) {
+    document.documentElement.dataset.nav = nav;
+    try {
+      const t = document.startViewTransition(run);
+      t.finished.finally(() => { delete document.documentElement.dataset.nav; });
+    } catch (e) { delete document.documentElement.dataset.nav; run(); }
+  } else run();
+}
+function goBack() {
+  if (stack.length > 1) { history.back(); return; }
+  const par = parentOf(cur);
+  stack = [par, cur];
+  location.replace('#' + par);
+}
+
+/* ---------- behaviours ---------- */
+function markLoaded() { view.querySelectorAll('.im>img').forEach((i) => { if (i.complete && i.naturalWidth) i.classList.add('ld'); }); }
+document.addEventListener('load', (e) => { const t = e.target; if (t && t.tagName === 'IMG') t.classList.add('ld'); }, true);
+document.addEventListener('error', (e) => { const t = e.target; if (t && t.tagName === 'IMG') t.classList.add('ld'); }, true);
+function bindTitle() {
+  if (io) { io.disconnect(); io = null; }
+  const bar = $('#abar'), h1 = view.querySelector('h1');
+  if (!bar) return;
+  if (!h1 || !('IntersectionObserver' in window)) { bar.classList.add('line'); return; }
+  io = new IntersectionObserver(([en]) => bar.classList.toggle('line', !en.isIntersecting), { rootMargin: '-56px 0px 0px 0px' });
+  io.observe(h1);
+}
+function bindRails() {
+  view.querySelectorAll('.track').forEach((t) => {
+    const id = t.id, bar = view.querySelector(`[data-prog="${id}"]`);
+    const prev = view.querySelector(`[data-rail="${id}"][data-dir="prev"]`), next = view.querySelector(`[data-rail="${id}"][data-dir="next"]`);
+    const update = () => {
+      const max = t.scrollWidth - t.clientWidth, pos = Math.abs(t.scrollLeft), p = max > 0 ? pos / max : 0, w = Math.min(100, (t.clientWidth / t.scrollWidth) * 100);
+      if (bar) { bar.style.width = w + '%'; bar.style.right = (p * (100 - w)) + '%'; }
+      if (prev) prev.disabled = pos < 4; if (next) next.disabled = pos > max - 4;
+    };
+    t.addEventListener('scroll', update, { passive: true }); update();
+  });
+}
+function bindGallery() {
+  const g = $('#gal'), dots = view.querySelectorAll('.dots span'); if (!g || !dots.length) return;
+  g.addEventListener('scroll', () => { const i = Math.round(Math.abs(g.scrollLeft) / g.clientWidth); dots.forEach((d, k) => d.classList.toggle('on', k === i)); }, { passive: true });
+}
+function bindSlides() {
+  const hero = $('#hero'); if (!hero) return;
+  const slides = [...hero.querySelectorAll('.slide')], bars = [...hero.querySelectorAll('.bars button')], pb = hero.querySelector('.hp');
+  let i = 0, paused = reduced.matches;
+  if (paused) { hero.classList.add('paused'); pb.setAttribute('aria-pressed', 'true'); pb.setAttribute('aria-label', 'پخش نمایش خودکار'); }
+  const show = (k) => {
+    i = (k + slides.length) % slides.length;
+    slides.forEach((s, n) => { const on = n === i; s.classList.toggle('on', on); s.toggleAttribute('aria-hidden', !on); s.querySelectorAll('a').forEach((a) => { a.tabIndex = on ? 0 : -1; }); });
+    bars.forEach((b, n) => { b.className = n < i ? 'done' : ''; });
+    void hero.offsetWidth; bars[i].className = 'run';
+    clearTimeout(heroT); if (!paused) heroT = setTimeout(() => show(i + 1), 7000);
+  };
+  hero.showSlide = show;
+  hero.togglePause = () => {
+    paused = !paused; hero.classList.toggle('paused', paused);
+    pb.setAttribute('aria-pressed', String(paused)); pb.setAttribute('aria-label', paused ? 'پخش نمایش خودکار' : 'توقف نمایش خودکار');
+    clearTimeout(heroT); if (!paused) show(i);
+  };
+  if (!paused) heroT = setTimeout(() => show(1), 7000);
+}
+function bindDeck() {
+  const box = $('#mhero'); if (!box) return;
+  const track = $('#mtrack'), slides = [...track.children], bars = [...box.querySelectorAll('.mbars button')], vid = $('#hero-vid'), n = slides.length;
+  const rtl = getComputedStyle(track).direction === 'rtl';
+  let i = 0, hold = false, settle = null;
+  const go = (k, smooth = true) => { track.scrollTo({ left: (rtl ? -1 : 1) * k * track.clientWidth, behavior: smooth && !reduced.matches ? 'smooth' : 'auto' }); };
+  const mark = (k) => {
+    i = k;
+    slides.forEach((s, m) => { s.tabIndex = m === k ? 0 : -1; s.setAttribute('aria-hidden', m === k ? 'false' : 'true'); });
+    bars.forEach((b, m) => { b.className = m < k ? 'done' : ''; });
+    void box.offsetWidth; bars[k].className = 'run';
+    if (vid) { if (k === 0 && !reduced.matches) { const p = vid.play(); if (p && p.catch) p.catch(() => {}); } else vid.pause(); }
+    clearTimeout(heroT); if (!reduced.matches && !hold) heroT = setTimeout(() => go((i + 1) % n), 6000);
+  };
+  track.addEventListener('scroll', () => {
+    clearTimeout(settle);
+    settle = setTimeout(() => { const k = Math.round(Math.abs(track.scrollLeft) / track.clientWidth); if (k !== i || !bars[k].classList.contains('run')) mark(Math.min(n - 1, Math.max(0, k))); }, 90);
+  }, { passive: true });
+  const pause = () => { hold = true; box.classList.add('hold'); clearTimeout(heroT); };
+  const resume = () => { if (!hold) return; hold = false; box.classList.remove('hold'); mark(i); };
+  track.addEventListener('touchstart', pause, { passive: true });
+  track.addEventListener('touchend', () => setTimeout(resume, 400), { passive: true });
+  box.goSlide = (k) => go(k);
+  mark(0);
+}
+function bindHero() {
+  const v = $('#hero-vid'); if (!v || !app.matches) return;
+  v.src = 'assets/video/hero.mp4'; v.muted = true;
+}
+function bindSearch() {
+  const q = $('#q'), out = $('#results');
+  const run = () => { const s = q.value.trim(); const items = s ? P.filter((p) => (p.name + ' ' + catOf(p.cat).name + ' ' + p.note).includes(s)) : P;
+    out.innerHTML = items.length ? items.map(pcard).join('') : `<p style="grid-column:1/-1;text-align:center;padding:40px 0;color:var(--mute)">چیزی پیدا نشد. واژه‌ی دیگری امتحان کنید.</p>`; markLoaded(); };
+  q.addEventListener('input', run); run();
+  if (!app.matches) q.focus();
+}
+const toastEl = $('#toast'); let toastT;
+function toast(html) { toastEl.innerHTML = html; toastEl.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => toastEl.classList.remove('show'), 3200); }
+
+/* bottom sheet */
+const sheetBg = $('#sheet'), sheetEl = sheetBg.querySelector('.sheet'); let lastFocus = null;
+function openSheet(title, body) {
+  $('#sheet-body').innerHTML = `<h2 id="sheet-title">${title}</h2>${body}`;
+  lastFocus = document.activeElement;
+  sheetBg.classList.add('open'); sheetBg.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => sheetEl.focus(), 60);
+}
+function closeSheet() {
+  if (!sheetBg.classList.contains('open')) return;
+  sheetBg.classList.remove('open'); sheetBg.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (lastFocus && lastFocus.focus && document.contains(lastFocus)) lastFocus.focus();
+}
+sheetBg.addEventListener('click', (e) => { if (e.target === sheetBg) closeSheet(); });
+let dragY = null;
+sheetEl.addEventListener('touchstart', (e) => { if (sheetEl.scrollTop > 0) return; dragY = e.touches[0].clientY; sheetEl.style.transition = 'none'; }, { passive: true });
+sheetEl.addEventListener('touchmove', (e) => { if (dragY === null) return; sheetEl.style.transform = `translateY(${Math.max(0, e.touches[0].clientY - dragY)}px)`; }, { passive: true });
+sheetEl.addEventListener('touchend', (e) => {
+  if (dragY === null) return;
+  const d = e.changedTouches[0].clientY - dragY; dragY = null;
+  sheetEl.style.transition = ''; sheetEl.style.transform = '';
+  if (d > 90) closeSheet();
+}, { passive: true });
+
+/* swipe from the right edge to go back (installed app only; browsers have their own gesture) */
+if (standalone) {
+  let sx = null, sy = 0;
+  addEventListener('touchstart', (e) => { const t = e.touches[0]; sx = t.clientX > innerWidth - 22 ? t.clientX : null; sy = t.clientY; }, { passive: true });
+  addEventListener('touchend', (e) => { if (sx === null) return; const t = e.changedTouches[0]; if (sx - t.clientX > 70 && Math.abs(t.clientY - sy) < 60 && !ROOTS.includes(cur)) goBack(); sx = null; }, { passive: true });
+}
+
+document.addEventListener('click', (e) => {
+  const tabLink = e.target.closest('.tabbar a');
+  if (tabLink && tabLink.getAttribute('href') === '#' + cur) { e.preventDefault(); window.scrollTo({ top: 0, behavior: reduced.matches ? 'auto' : 'smooth' }); return; }
+  const b = e.target.closest('[data-act],[data-rail]'); if (!b) return;
+  if (b.dataset.rail) { const t = document.getElementById(b.dataset.rail); if (t) t.scrollBy({ left: t.clientWidth * 0.8 * (b.dataset.dir === 'next' ? -1 : 1), behavior: 'smooth' }); return; }
+  const act = b.dataset.act, id = +b.dataset.id;
+  if (act === 'back') goBack();
+  else if (act === 'pane') selectTab(b);
+  else if (act === 'strip-close') { $('#strip').hidden = true; }
+  else if (act === 'wish') {
+    const on = !wish.includes(id); wish = on ? wish.concat(id) : wish.filter((x) => x !== id); saveWish(); buzz();
+    document.querySelectorAll(`[data-act="wish"][data-id="${id}"]`).forEach((el) => {
+      el.setAttribute('aria-pressed', String(on));
+      if (el.classList.contains('btn')) el.textContent = on ? 'در علاقه‌مندی‌ها' : 'افزودن به علاقه‌مندی‌ها';
+      if (on && (el.classList.contains('heart') || el.classList.contains('sq'))) { el.classList.remove('pop'); void el.offsetWidth; el.classList.add('pop'); }
+    });
+    toast(on ? 'به علاقه‌مندی‌ها اضافه شد <a href="#wish">دیدن</a>' : 'از علاقه‌مندی‌ها برداشته شد');
+  }
+  else if (act === 'size') b.parentElement.querySelectorAll('.chip').forEach((c) => { c.classList.toggle('on', c === b); c.setAttribute('aria-pressed', String(c === b)); });
+  else if (act === 'add') {
+    const p = byId(id), sel = view.querySelector('.sizes .chip.on'), mt = view.querySelector('.metal [aria-checked="true"]');
+    const size = sel ? sel.textContent.replace(/[۰-۹]/g, (d) => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d)) : null, metal = mt ? mt.dataset.m : 'zard';
+    const ex = bag.find((x) => x.id === id && x.size === size && (x.metal || 'zard') === metal); if (ex) ex.qty++; else bag.push({ id, qty: 1, size, metal });
+    saveBag(); buzz();
+    document.querySelectorAll('.tabbar [data-bag-count]').forEach((el) => { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); });
+    openSheet('به سبد خرید اضافه شد', `<div class="added"><span class="im"><img class="wb ld" src="${IMG(p.img)}" alt=""></span><div><b>${p.name}</b><span>طلای ${metalName(metal)} ۱۸ عیار${size ? '، سایز ' + fa(size) : ''}</span><span>[قیمت] تومان</span></div></div>
+<div class="acts"><button class="btn o" type="button" data-act="sheet-close">ادامه‌ی خرید</button><a class="btn" href="#bag" data-act="sheet-close">دیدن سبد خرید</a></div>`);
+  }
+  else if (act === 'qty') { const it = bag[+b.dataset.i]; it.qty = Math.max(1, it.qty + (+b.dataset.d)); saveBag(); rerender(); }
+  else if (act === 'remove') { bag.splice(+b.dataset.i, 1); saveBag(); rerender(); }
+  else if (act === 'pay') toast('در نسخه‌ی نهایی، این دکمه به درگاه پرداخت بانکی وصل می‌شود.');
+  else if (act === 'mslide') { const box = $('#mhero'); if (box && box.goSlide) box.goSlide(+b.dataset.k); }
+  else if (act === 'slide') { const hero = $('#hero'); if (hero && hero.showSlide) hero.showSlide(+b.dataset.k); }
+  else if (act === 'hero-pause') { const hero = $('#hero'); if (hero && hero.togglePause) hero.togglePause(); }
+  else if (act === 'metal') { b.parentElement.querySelectorAll('[role="radio"]').forEach((r) => r.setAttribute('aria-checked', String(r === b))); $('#metal-l').textContent = 'رنگ طلا: ' + metalName(b.dataset.m); }
+  else if (act === 'notes') notesSheet();
+  else if (act === 'onb-done' || act === 'onb-login') endOnboarding(act === 'onb-login');
+  else if (act === 'onb-show') { const o = $('#onb'); o.classList.remove('bye'); document.documentElement.classList.add('onb-on'); }
+  else if (act === 'book') toast('در نسخه‌ی نهایی، این دکمه فرم رزرو وقت را باز می‌کند.');
+  else if (act === 'soon') toast('این بخش در نسخه‌ی نهایی فعال می‌شود.');
+  else if (act === 'share') share();
+  else if (act === 'notify') notify(b);
+  else if (act === 'q') { const q = $('#q'); q.value = b.dataset.q; q.dispatchEvent(new Event('input')); }
+  else if (act === 'install') install();
+  else if (act === 'install-close') { $('#install').hidden = true; store.set('install-dismissed', Date.now()); }
+  else if (act === 'install-help') installHelp();
+  else if (act === 'sheet-close') closeSheet();
+});
+function notesSheet() {
+  const n = (icon, text, small) => `<div class="note"><span class="li">${icon}</span><div>${text}<small>${small}</small></div></div>`;
+  openSheet('اعلان‌ها', `<div class="notes">${n(I.spark, 'نرخ امروز طلای ۱۸ عیار: هر گرم [نرخ] تومان', '[ساعت به‌روزرسانی]')}${n(I.gift, 'کالکشن ایران باستان در فروشگاه رستا', 'کالکشن‌ها')}${bag.length ? n(I.box, `${fa(bagCount())} قطعه در سبد خرید شما منتظر است`, 'سبد خرید') : ''}</div>
+<a class="btn o block" href="#account" data-act="sheet-close">تنظیم اعلان‌ها</a>`);
+}
+function endOnboarding(login) {
+  store.set('onboarded', true);
+  const o = $('#onb'); o.classList.add('bye');
+  setTimeout(() => { document.documentElement.classList.remove('onb-on'); o.classList.remove('bye'); }, 430);
+  if (login) location.hash = '#account';
+}
+function share() {
+  const data = { title: document.title, url: location.href };
+  if (navigator.share) { navigator.share(data).catch(() => {}); return; }
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(location.href).then(() => toast('پیوند این قطعه کپی شد.'), () => toast('اشتراک‌گذاری در این مرورگر در دسترس نیست.'));
+  else toast('اشتراک‌گذاری در این مرورگر در دسترس نیست.');
+}
+function notify(b) {
+  const set = (on) => { b.setAttribute('aria-checked', String(on)); store.set('notify', on); };
+  if (b.getAttribute('aria-checked') === 'true') { set(false); return; }
+  if (!('Notification' in window)) { toast('این مرورگر اعلان ندارد؛ پس از نصب اپ دوباره امتحان کنید.'); return; }
+  const done = (r) => { const ok = r === 'granted'; set(ok); toast(ok ? 'اعلان روشن شد؛ در نسخه‌ی نهایی، تغییر نرخ طلا خبر داده می‌شود.' : 'اجازه‌ی اعلان داده نشد.'); };
+  try { const p = Notification.requestPermission(done); if (p && p.then) p.then(done).catch(() => {}); } catch (e) { toast('اعلان در این صفحه در دسترس نیست.'); }
+}
+function selectTab(b) {
+  b.parentElement.querySelectorAll('[role="tab"]').forEach((t) => {
+    const on = t === b; t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1;
+    const pane = document.getElementById(t.getAttribute('aria-controls')); pane.hidden = !on;
+    if (on) { const tr = pane.querySelector('.track'); if (tr) { tr.scrollLeft = 0; tr.dispatchEvent(new Event('scroll')); } markLoaded(); }
+  });
+}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') { closeSheet(); return; }
+  const t = e.target.closest && e.target.closest('[role="tab"]');
+  if (t && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+    const tabs = [...t.parentElement.querySelectorAll('[role="tab"]')], i = tabs.indexOf(t);
+    const n = tabs[(i + (e.key === 'ArrowLeft' ? 1 : -1) + tabs.length) % tabs.length]; selectTab(n); n.focus(); e.preventDefault();
+  }
+});
+document.addEventListener('submit', (e) => {
+  if (e.target.id === 'news-form') { e.preventDefault(); toast('این فرم نمایشی است؛ در نسخه‌ی نهایی شماره ثبت می‌شود.'); }
+  if (e.target.id === 'login-form') { e.preventDefault(); toast('در نسخه‌ی نهایی، کد ورود به این شماره پیامک می‌شود.'); }
+});
+
+/* ---------- install (PWA) ---------- */
+let deferred = null;
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+const dismissed = () => Date.now() - (store.get('install-dismissed', 0) || 0) < 7 * 864e5;
+function showInstall() { if (!standalone && !dismissed()) $('#install').hidden = false; }
+addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferred = e; showInstall(); });
+addEventListener('appinstalled', () => { $('#install').hidden = true; toast('رستا روی گوشی شما نصب شد.'); });
+if (isIOS && !standalone) setTimeout(showInstall, 2500);
+function install() { if (deferred) { deferred.prompt(); deferred.userChoice.finally(() => { deferred = null; $('#install').hidden = true; }); } else installHelp(); }
+function installHelp() {
+  openSheet('نصب رستا روی گوشی', (standalone ? '<p style="color:var(--mute)">رستا هم‌اکنون به‌صورت اپ روی این دستگاه باز است.</p>'
+    : `<p style="color:var(--mute)">رستا بدون فروشگاه اپ نصب می‌شود و مثل یک اپ از صفحه‌ی اصلی گوشی باز می‌شود.</p>
+<div><b style="font-weight:500;font-size:14px">آیفون (Safari)</b><ol><li>دکمه‌ی اشتراک‌گذاری (مربع با فلش رو به بالا) را بزنید.</li><li>گزینه‌ی Add to Home Screen را انتخاب کنید.</li><li>Add را بزنید.</li></ol></div>
+<div><b style="font-weight:500;font-size:14px">اندروید (Chrome)</b><ol><li>منوی سه‌نقطه‌ی بالای مرورگر را باز کنید.</li><li>Install app یا Add to Home screen را بزنید.</li></ol></div>`)
+    + '<button class="btn o block" type="button" data-act="sheet-close">متوجه شدم</button>');
+}
+
+/* ---------- static chrome ---------- */
+$('#topnav').innerHTML = CATS.map((c) => `<a href="#cat-${c.slug}">${c.name}</a>`).join('') + '<a href="#gifts-list">هدیه</a><a href="#bespoke">سفارش اختصاصی</a>';
+$('#foot-cols').innerHTML = [
+  ['خدمات مشتریان', [['تماس با ما', '#visit'], ['پیگیری سفارش', '#orders'], ['ارسال و بازگشت', '#bag'], ['پرسش‌های متداول', '#home']]],
+  ['خدمات', [['رزرو وقت', '#visit'], ['سفارش اختصاصی', '#bespoke'], ['پلاک نام', '#cat-pelak'], ['راهنمای سایز', '#p-1']]],
+  ['دنیای رستا', [['گالری رستا', '#visit'], ['داستان رستا', '#home'], ['مجله', '#home']]],
+  ['قوانین', [['شرایط استفاده', '#home'], ['حریم خصوصی', '#home'], ['ضمانت و اصالت', '#home']]]
+].map(([t, links]) => `<details ${app.matches ? '' : 'open'}><summary>${t}</summary><div class="in">${links.map(([n, hh]) => `<a href="${hh}">${n}</a>`).join('')}</div></details>`).join('');
+
+addEventListener('hashchange', onNav);
+app.addEventListener('change', () => { if (cur) route(cur, 0); });
+counts(); onNav();
+try { if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {}); } catch (e) {}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "id": "./",
+  "name": "گالری طلای رستا",
+  "short_name": "رستا",
+  "description": "جواهرات طلای ۱۸ عیار، کالکشن‌ها و سفارش اختصاصی گالری طلای رستا",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./#home",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#820D1F",
+  "theme_color": "#FFFFFF",
+  "categories": ["shopping", "lifestyle"],
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [
+    { "src": "assets/screens/home.webp", "sizes": "780x1688", "type": "image/webp", "form_factor": "narrow", "label": "صفحه‌ی اصلی رستا" },
+    { "src": "assets/screens/shop.webp", "sizes": "780x1688", "type": "image/webp", "form_factor": "narrow", "label": "فروشگاه و دسته‌ها" },
+    { "src": "assets/screens/list.webp", "sizes": "780x1688", "type": "image/webp", "form_factor": "narrow", "label": "فهرست گردنبندها" },
+    { "src": "assets/screens/product.webp", "sizes": "780x1688", "type": "image/webp", "form_factor": "narrow", "label": "صفحه‌ی محصول" },
+    { "src": "assets/screens/wide.webp", "sizes": "1440x900", "type": "image/webp", "form_factor": "wide", "label": "رستا روی دسکتاپ" }
+  ],
+  "shortcuts": [
+    { "name": "فروشگاه", "url": "./#shop", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "علاقه‌مندی‌ها", "url": "./#wish", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "سبد خرید", "url": "./#bag", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "حساب من", "url": "./#account", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
