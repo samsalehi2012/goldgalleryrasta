@@ -1,5 +1,5 @@
 /* Rasta PWA service worker: app shell offline, images cache-first, video always from network. */
-const VERSION = 'rasta-v10';
+const VERSION = 'rasta-v14';
 const SHELL = [
   './',
   './index.html',
