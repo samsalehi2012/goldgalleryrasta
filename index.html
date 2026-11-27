@@ -507,7 +507,7 @@ a,button{touch-action:manipulation}
 /* category banner (image can be changed in the panel) */
 .cban{position:relative;display:grid;grid-template-columns:minmax(0,1fr);background:var(--mist);isolation:isolate}
 .cban .im{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--mist)}
-.cban .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cban .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--pos)}
 .cban .tx{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:28px var(--pad)}
 .cban h1{font-size:32px}
 .cban p{font-size:14.5px;line-height:2;color:var(--mute);max-width:440px}
@@ -515,6 +515,7 @@ a,button{touch-action:manipulation}
 .cban .cta{margin-top:6px}
 .cintro{display:none}
 .catnav{padding-top:24px}
+.cintro+.cbar{padding-top:32px}
 .cbprev{display:grid;grid-template-columns:132px minmax(0,1fr);gap:14px;align-items:center}
 .cbprev img{width:132px;aspect-ratio:4/3;object-fit:cover;background:var(--mist)}
 .cbprev span{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
@@ -568,6 +569,8 @@ a,button{touch-action:manipulation}
   .appbar.over .sq .dot{box-shadow:0 0 0 2px rgba(255,255,255,.6)}
   .abar{display:grid;grid-template-columns:52px minmax(0,1fr) 52px;align-items:center;position:sticky;top:0;z-index:30;height:calc(60px + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 12px 0;background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.8) blur(20px);backdrop-filter:saturate(1.8) blur(20px);border-bottom:1px solid transparent;transition:border-color .3s;view-transition-name:abar}
   .abar.line{border-bottom-color:var(--line)}
+  .abar.float{margin-bottom:-48px;transition:border-color .3s,background-color .3s}
+  .abar.float:not(.line){background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none;pointer-events:none}
   .abar>:last-child{justify-self:end}
   .abar .t{font-size:15px;font-weight:700;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;transform:translateY(4px);transition:opacity .25s,transform .25s var(--ease)}
   .abar.line .t{opacity:1;transform:none}
@@ -761,6 +764,7 @@ a,button{touch-action:manipulation}
   .pvals b{font-weight:800}
   .cban{display:block;margin:0 16px;aspect-ratio:1/.86;border-radius:var(--r-xl);overflow:hidden;color:#fff;background:var(--pearl)}
   .cban .im{position:absolute;inset:0;aspect-ratio:auto;z-index:-2}
+  .cban .im img{object-position:var(--mpos,var(--pos))}
   .cban::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(0,0,0,.66) 0%,rgba(0,0,0,.26) 40%,rgba(0,0,0,0) 64%)}
   .cban .tx{position:absolute;inset:auto 0 0 0;gap:0;padding:20px 20px 18px;text-shadow:0 1px 12px rgba(0,0,0,.3)}
   .cban .kick{color:rgba(255,255,255,.82)}
@@ -769,6 +773,7 @@ a,button{touch-action:manipulation}
   .cban p,.cban .cta{display:none}
   .cintro{display:block;margin:14px 20px 0;font-size:13.5px;line-height:1.95;color:var(--mute)}
   .catnav{padding-top:16px;padding-bottom:12px}
+  .cintro+.cbar{padding-top:16px}
   .cbprev img{border-radius:14px}
 
   /* launch screen and first-run introduction */
@@ -1094,6 +1099,7 @@ const REC = [...new Set(LISTS.loved.concat(LISTS.best, P.map((p) => p.id)))];
 const PLURAL = { halghe: 'حلقه‌ها', angoshtar: 'انگشترها', dastband: 'دستبندها', bangle: 'بنگل‌ها', alangoo: 'النگوها', goshvare: 'گوشواره‌ها', gardanband: 'گردنبندها', pelak: 'پلاک‌ها', accessory: 'اکسسوری‌ها' };
 /* default banner per category: image, focus, short text (all editable in the panel) */
 const CATDEF = {
+  shop: ['edit_life', 'center 38%', 'همه‌ی جواهرات طلای ۱۸ عیار رستا، از انگشتر و گردنبند تا دستبند و گوشواره؛ با فاکتور رسمی، شناسنامه‌ی قطعه و قیمت بر اساس نرخ روز.', 'center 22%'],
   halghe: ['pr/2m', 'center 38%', 'حلقه‌های ساده و گره‌دار طلای ۱۸ عیار؛ برای هر روز، یا برای پیوندی که می‌ماند.'],
   angoshtar: ['pr/1m', 'center 45%', 'انگشترهای طلای ۱۸ عیار، ساده یا نگین‌دار، ساخت کارگاه رستا. سایز یا طرح دیگری می‌خواهید؟ سفارش دهید.'],
   dastband: ['pr/12m', 'center 55%', 'از زنجیرهای ظریف تا حلقه‌های درشت؛ دستبندهای طلای ۱۸ عیار با فاکتور رسمی و شناسنامه.'],
@@ -1105,12 +1111,14 @@ const CATDEF = {
   accessory: ['pr/35m', 'center 55%', 'بندها و قطعه‌های سبک با جزئیات طلا، برای هدیه یا هر روز.']
 };
 const POS = { top: 'center 15%', center: 'center 50%', bottom: 'center 85%' };
-function catBan(c) {
-  const o = (cms().cats || {})[c.slug] || {}, d = CATDEF[c.slug], txt = o.txt || d[2], n = P.filter((p) => p.cat === c.slug).length;
-  return `<section class="cban" aria-labelledby="cban-t"><div class="tx"><span class="kick">جواهرات</span><h1 id="cban-t">${c.name}</h1><p>${esc(txt)}</p><span class="n">${fa(n)} قطعه، طلای ۱۸ عیار</span><a class="cta" href="#bespoke" data-btype="${CAT2TYPE[c.slug]}">${c.name} دلخواهتان را سفارش دهید</a></div><div class="im"><img src="${o.img || IMG(d[0])}" alt="" style="object-position:${POS[o.pos] || d[1]}"></div></section>
-<p class="cintro">${esc(txt)}</p>
-<div class="chips catnav"><a class="chip" href="#all">همه</a>${CATS.map((x) => `<a class="chip ${x.slug === c.slug ? 'on' : ''}" href="#cat-${x.slug}"${x.slug === c.slug ? ' aria-current="page"' : ''}>${x.name}</a>`).join('')}</div>`;
+function banHTML(slug, title, kick, n, cta) {
+  const o = (cms().cats || {})[slug] || {}, d = CATDEF[slug], txt = o.txt || d[2];
+  return `<section class="cban" aria-labelledby="cban-t"><div class="tx"><span class="kick">${kick}</span><h1 id="cban-t">${title}</h1><p>${esc(txt)}</p><span class="n">${fa(n)} قطعه، طلای ۱۸ عیار</span>${cta}</div><div class="im"><img src="${o.img || IMG(d[0])}" alt="" style="--pos:${POS[o.pos] || d[1]};--mpos:${POS[o.pos] || d[3] || d[1]}"></div></section>
+<p class="cintro">${esc(txt)}</p>`;
 }
+const catNav = (active) => `<div class="chips catnav"><a class="chip ${active === 'all' ? 'on' : ''}" href="#all"${active === 'all' ? ' aria-current="page"' : ''}>همه</a>${CATS.map((x) => `<a class="chip ${x.slug === active ? 'on' : ''}" href="#cat-${x.slug}"${x.slug === active ? ' aria-current="page"' : ''}>${x.name}</a>`).join('')}</div>`;
+const catBan = (c) => banHTML(c.slug, c.name, 'جواهرات', P.filter((p) => p.cat === c.slug).length, `<a class="cta" href="#bespoke" data-btype="${CAT2TYPE[c.slug]}">${c.name} دلخواهتان را سفارش دهید</a>`) + catNav(c.slug);
+const shopBan = (title, kick) => banHTML('shop', title, kick, P.length, '<a class="cta" href="#bespoke">طلای دلخواهتان را سفارش دهید</a>');
 
 const norm = (s) => toLatin(String(s || '')).toLowerCase()
   .replace(/[يى]/g, 'ی').replace(/ك/g, 'ک').replace(/[ةۀ]/g, 'ه').replace(/[أإآٱ]/g, 'ا').replace(/ؤ/g, 'و')
@@ -1315,7 +1323,7 @@ const rail = (id, ids) => `
   <button class="arr next" type="button" data-rail="${id}" data-dir="next" aria-label="بعدی">${I.fwd}</button>
   <div class="prog" aria-hidden="true"><span data-prog="${id}"></span></div>
 </div>`;
-const abar = (title, o = {}) => `<div class="abar" id="abar">${o.root ? '<span></span>' : `<button class="ib back" type="button" data-act="back" aria-label="بازگشت">${I.backLg}</button>`}<div class="t" aria-hidden="true">${title}</div>${o.action || '<span></span>'}</div>`;
+const abar = (title, o = {}) => `<div class="abar${o.float ? ' float' : ''}" id="abar">${o.root ? '<span></span>' : `<button class="ib back" type="button" data-act="back" aria-label="بازگشت">${I.backLg}</button>`}<div class="t" aria-hidden="true">${title}</div>${o.action || '<span></span>'}</div>`;
 const searchBtn = `<a class="ib" href="#search" aria-label="جست‌وجو">${I.search}</a>`;
 const lrow = (label, o = {}) => {
   const inner = `${o.icon ? `<span class="li">${o.icon}</span>` : ''}<span class="lt">${label}</span>${o.extra || ''}${o.sw ? '<span class="sw" aria-hidden="true"></span>' : I.fwd}`;
@@ -1644,11 +1652,12 @@ function panelView() {
 </div>`;
 }
 let catDraft = {}, cbSlug = null;
+const BANS = () => [{ slug: 'shop', name: 'فروشگاه و همه‌ی جواهرات' }].concat(CATS);
 function catsForm() {
   const c = cms().cats || {};
   return `<form class="pform" id="cats-form" novalidate>
-<p class="opt-note">بنر بالای صفحه‌ی هر دسته. عکس با کیفیت و نزدیک به مربع یا افقی بهتر است؛ در دسکتاپ کنار متن و در گوشی با گوشه‌های گرد و نام دسته روی عکس نمایش داده می‌شود.</p>
-${CATS.map((x) => { const o = c[x.slug] || {}, d = CATDEF[x.slug]; return `<fieldset><legend>${x.name}</legend>
+<p class="opt-note">بنر بالای صفحه‌ی فروشگاه و هر دسته. عکس با کیفیت و نزدیک به مربع یا افقی بهتر است؛ در دسکتاپ کنار متن و در گوشی با گوشه‌های گرد و نام دسته روی عکس نمایش داده می‌شود.</p>
+${BANS().map((x) => { const o = c[x.slug] || {}, d = CATDEF[x.slug]; return `<fieldset><legend>${x.name}</legend>
   <div class="cbprev"><img id="cbp-${x.slug}" src="${o.img || IMG(d[0])}" alt="" style="object-position:${POS[o.pos] || d[1]}"><span><button class="btn o sm" type="button" data-act="cb-up" data-s="${x.slug}">بارگذاری عکس تازه</button><button class="linkbtn" type="button" data-act="cb-def" data-s="${x.slug}">عکس پیش‌فرض</button></span></div>
   <label class="fld">تمرکز عکس<select name="pos-${x.slug}" data-cbpos="${x.slug}">${[['', 'پیش‌فرض'], ['top', 'بالا'], ['center', 'وسط'], ['bottom', 'پایین']].map(([v, n]) => `<option value="${v}"${(o.pos || '') === v ? ' selected' : ''}>${n}</option>`).join('')}</select></label>
   <label class="fld">متن کوتاه<textarea name="txt-${x.slug}" maxlength="220" style="min-height:76px">${esc(o.txt || d[2])}</textarea></label></fieldset>`; }).join('')}
@@ -1660,7 +1669,7 @@ ${CATS.map((x) => { const o = c[x.slug] || {}, d = CATDEF[x.slug]; return `<fiel
 function putCms(o) { try { localStorage.setItem('rasta2-cms', JSON.stringify(o)); return true; } catch (e) { return false; } }
 function saveCats(f) {
   const fd = new FormData(f), old = store.get('cms', {}) || {}, prev = old.cats || {}, cats = {};
-  CATS.forEach((x) => {
+  BANS().forEach((x) => {
     const p = prev[x.slug] || {}, img = x.slug in catDraft ? catDraft[x.slug] : p.img || '', txt = String(fd.get('txt-' + x.slug) || '').trim();
     const o = { img: img || '', pos: String(fd.get('pos-' + x.slug) || ''), txt: txt === CATDEF[x.slug][2] ? '' : txt };
     if (o.img || o.pos || o.txt) cats[x.slug] = o;
@@ -1712,8 +1721,8 @@ function route(h, y) {
   onHome = false;
   clearTimeout(heroT); heroT = null;
   if (h === 'home') { html = app.matches ? homeApp() : homeWeb(); onHome = true; }
-  else if (h === 'shop') { bar = ['فروشگاه', { root: true }]; html = catalogView({ key: 'shop', base: REC, ph: 'جست‌وجو در همه‌ی جواهرات', head: phead('فروشگاه'), browse: shopBrowse() }); title = 'فروشگاه · رستا'; }
-  else if (h === 'all') { bar = ['همه‌ی جواهرات']; html = catalogView({ key: 'all', base: REC, ph: 'جست‌وجو در همه‌ی جواهرات', head: phead('همه‌ی جواهرات', 'جواهرات') }); title = 'همه‌ی جواهرات · رستا'; }
+  else if (h === 'shop') { bar = ['فروشگاه', { root: true, float: true }]; html = catalogView({ key: 'shop', base: REC, ph: 'جست‌وجو در همه‌ی جواهرات', head: shopBan('فروشگاه', 'گالری طلای رستا'), browse: shopBrowse() }); title = 'فروشگاه · رستا'; }
+  else if (h === 'all') { bar = ['همه‌ی جواهرات']; html = catalogView({ key: 'all', base: REC, ph: 'جست‌وجو در همه‌ی جواهرات', head: shopBan('همه‌ی جواهرات', 'جواهرات') + catNav('all') }); title = 'همه‌ی جواهرات · رستا'; }
   else if (h === 'search') { bar = ['جست‌وجو']; html = catalogView({ key: 'search', base: REC, ph: 'نام قطعه، دسته، رنگ یا نگین', head: phead('جست‌وجو'), sugg: true }); title = 'جست‌وجو · رستا'; }
   else if (LISTPAGES[h]) { const [t, ids] = LISTPAGES[h]; bar = [t]; html = catalogView({ key: h, base: ids, ph: 'جست‌وجو در ' + t, head: phead(t, 'جواهرات') }); title = t + ' · رستا'; }
   else if (h.startsWith('col-') && colOf(h.slice(4))) { const c = colOf(h.slice(4)); bar = ['کالکشن ' + c.name, { action: searchBtn }]; html = collectionView(c); title = 'کالکشن ' + c.name + ' · رستا'; }
